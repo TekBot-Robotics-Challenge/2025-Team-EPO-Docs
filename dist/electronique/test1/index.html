@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="fr"> <head><meta charset="UTF-8"><meta name="description" content="Documentation technique complète pour le Tekbot Robotics Challenge 2025"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/2025-Team-EPO-Docsfavicon.svg"><meta name="generator" content="Astro v5.9.2"><title>Test Électronique - Documentation Complète</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/2025-Team-EPO-Docs/_astro/index.CcRQwRFP.css"></head> <body class="bg-gray-50 text-gray-900 font-sans">  <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <!-- Logo and title --> <div class="flex items-center space-x-4"> <div class="flex items-center space-x-2"> <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center"> <span class="text-white font-bold text-lg">T</span> </div> <div> <h1 class="text-xl font-bold text-gray-900">TRC2K25</h1> <p class="text-xs text-gray-500">Documentation Technique</p> </div> </div> </div> <!-- Navigation --> <nav class="hidden md:flex items-center space-x-8"> <a href="/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-50">
+Accueil
+</a> <a href="/electronique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-electronics-600 bg-yellow-50">
+Électronique
+</a> <a href="/informatique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-informatics-600 hover:bg-gray-50">
+Informatique
+</a> <a href="/mecanique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-mechanics-600 hover:bg-gray-50">
+Mécanique
+</a> <a href="/test-final/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-testing-600 hover:bg-gray-50">
+Test Final
+</a> <a href="https://github.com/username/trc2k25-documentation" target="_blank" class="text-gray-700 hover:text-gray-900 transition-colors" aria-label="Voir sur GitHub"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path> </svg> </a> </nav> <!-- Mobile menu button --> <div class="md:hidden"> <button type="button" class="text-gray-700 hover:text-gray-900 focus:outline-none focus:text-gray-900" id="mobile-menu-button"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile menu --> <div class="md:hidden hidden" id="mobile-menu"> <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200"> <a href="/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">Accueil</a> <a href="/electronique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-electronics-600 hover:bg-gray-50 rounded-md">Électronique</a> <a href="/informatique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-informatics-600 hover:bg-gray-50 rounded-md">Informatique</a> <a href="/mecanique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-mechanics-600 hover:bg-gray-50 rounded-md">Mécanique</a> <a href="/test-final/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-testing-600 hover:bg-gray-50 rounded-md">Test Final</a> </div> </div> </div> </header> <script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("mobile-menu-button"),n=document.getElementById("mobile-menu");e&&n&&e.addEventListener("click",function(){n.classList.toggle("hidden")})});</script> <main class="min-h-screen bg-gray-50"> <!-- Page Header --> <section class="bg-gradient-to-r from-blue-500 to-teal-600 text-white py-16"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex items-center space-x-4 mb-6"> <div class="w-16 h-16 bg-white bg-opacity-20 rounded-lg flex items-center justify-center text-3xl">
+🔌
+</div> <div> <h1 class="text-4xl md:text-5xl font-bold">Test Électronique</h1> <p class="text-xl opacity-90 mt-2">
+Conception et mise en œuvre du système électronique
+</p> </div> </div> </div> </section> <!-- Content --> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"> <div class="flex flex-col lg:flex-row gap-8"> <!-- Sidebar TOC --> <aside class="lg:w-64 flex-shrink-0"> <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 sticky top-20"> <h2 class="text-lg font-semibold text-gray-900 mb-4">
+Table des Matières
+</h2> <nav class="space-y-2"> <a href="#introduction" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">1. Introduction</a> <a href="#objectifs" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">2. Objectifs du test</a> <a href="#materiel" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">3. Matériel et choix des composants</a> <a href="#schema" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">4. Schéma électronique et implantation</a> <a href="#alimentation" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">5. Alimentation électrique et justification</a> <a href="#cablage" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">6. Câblage et connectique</a> <a href="#code" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">7. Code Arduino</a> <a href="#tests" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">8. Tests et résultats</a> <a href="#boitier-3d" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">9. Boîtier 3D</a> <a href="#demo-sans-boitier" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">10. Démonstration sans boîtier</a> <a href="#demo-final" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">11. Démonstration finale</a> <a href="#conclusion" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">12. Conclusion</a> <a href="#annexes" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">13. Annexes et liens Drive</a> </nav> </div> </aside> <!-- Main Content --> <div class="flex-1"> <div class="bg-white rounded-lg shadow-sm border border-gray-200"> <!-- Introduction --> <section id="introduction" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+1. Introduction
+</h2> <p class="text-gray-600">
+Le but de ce test est de valider notre capacité à identifier et
+                exploiter un capteur I²C combiné gyroscope/accéléromètre,
+                fournir une alimentation stable et sécurisée, et lire et
+                afficher en temps réel l’orientation et l’accélération de la
+                main porteuse du capteur.
+</p> </section> <!-- Objectifs --> <section id="objectifs" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+2. Objectifs du test
+</h2> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>
+Sélectionner et documenter un module gyroscope + accéléromètre
+                  (I²C).
+</li> <li>
+Développer une alimentation 5 V fiable (protection
+                  courts-circuits, filtrage).
+</li> <li>Réaliser le schéma sous KiCAD.</li> <li>Écrire un code Arduino lisible, optimisé et commenté.</li> <li>
+Tester le dispositif en mouvements selon les 6 directions.
+</li> <li>Documenter chaque étape sur GitHub Pages.</li> </ul> </section> <!-- Matériel --> <section id="materiel" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+3. Matériel et choix des composants
+</h2> <p class="text-gray-600 mb-4">
+Cette section détaille les composants utilisés dans le projet,
+                ainsi que les raisons pour lesquelles ils ont été choisis.
+</p> <div class="overflow-x-auto mb-6"> <table class="w-full border border-gray-200 rounded-lg overflow-hidden"> <thead class="bg-gray-50"> <tr> <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Composant</th> <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Référence/Version</th> <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Description</th> <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Justification</th> </tr> </thead> <tbody class="divide-y divide-gray-200"> <tr> <td class="px-4 py-3 text-sm font-medium text-gray-900">MPU6050</td> <td class="px-4 py-3 text-sm text-gray-600">v1.4.3</td> <td class="px-4 py-3 text-sm text-gray-600">Capteur combiné gyroscope et accéléromètre utilisant le
+                        protocole I2C pour la communication.</td> <td class="px-4 py-3 text-sm text-gray-600">Le MPU6050 est choisi pour sa capacité à fournir des
+                        mesures inertielles précises et sa facilité
+                        d'intégration avec les microcontrôleurs comme l'Arduino.
+                        Il est largement utilisé dans les projets nécessitant
+                        une détection de mouvement et d'orientation. <a href="https://www.alldatasheet.com/view.jsp?Searchword=Mpu-6050%20datasheet&gad_source=1&gad_campaignid=163458844&gclid=CjwKCAjw9anCBhAWEiwAqBJ-c_cEGuP1xdmCnd3BW27Ma8IynYx2uc2NpYThdieMsXoaPQiiL8SeEBoCqfoQAvD_BwE" class="text-blue-500">Datasheet</a></td> </tr> <tr class="bg-gray-50"> <td class="px-4 py-3 text-sm font-medium text-gray-900">Régulateur linéaire 5V</td> <td class="px-4 py-3 text-sm text-gray-600">LM7805</td> <td class="px-4 py-3 text-sm text-gray-600">Régulateur de tension linéaire fournissant une sortie
+                        stable de 5V.</td> <td class="px-4 py-3 text-sm text-gray-600">Le LM7805 est sélectionné pour sa simplicité
+                        d'utilisation et sa disponibilité. Bien que des
+                        alternatives comme l'AMS1117 puissent offrir de
+                        meilleures performances thermiques, le LM7805 est
+                        préféré ici pour sa compatibilité avec les bibliothèques
+                        KiCAD et sa documentation complète. <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://cdn.sparkfun.com/assets/1/7/7/3/2/LM7805.pdf&ved=2ahUKEwiw0Km5u-uNAxXPRKQEHf6mGSMQFnoECB4QAQ&usg=AOvVaw3zL47HXpTlbHlrM2tlLoGo" class="text-blue-500">Datasheet</a></td> </tr> <tr> <td class="px-4 py-3 text-sm font-medium text-gray-900">Carte Arduino Uno</td> <td class="px-4 py-3 text-sm text-gray-600">ATmega328P, IDE 2</td> <td class="px-4 py-3 text-sm text-gray-600">Plateforme de développement basée sur le
+                        microcontrôleur ATmega328P.</td> <td class="px-4 py-3 text-sm text-gray-600">L'Arduino Uno est utilisé pour sa simplicité et sa
+                        compatibilité avec une large gamme de capteurs et
+                        d'actionneurs. Il est idéal pour les prototypes et les
+                        projets éducatifs grâce à sa documentation exhaustive et
+                        sa communauté active. <a href="https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf" class="text-blue-500">Datasheet</a></td> </tr> <tr class="bg-gray-50"> <td class="px-4 py-3 text-sm font-medium text-gray-900">Écran LCD 16x2</td> <td class="px-4 py-3 text-sm text-gray-600">I2C via PCF8574</td> <td class="px-4 py-3 text-sm text-gray-600">Écran LCD 16x2 avec interface I2C pour une
+                        communication simplifiée.</td> <td class="px-4 py-3 text-sm text-gray-600">L'écran LCD avec interface I2C est choisi pour sa
+                        facilité de connexion et son faible encombrement en
+                        termes de broches utilisées sur l'Arduino. Cela
+                        simplifie le câblage et permet une intégration facile
+                        dans les projets.</td> </tr> <tr> <td class="px-4 py-3 text-sm font-medium text-gray-900">Condensateurs</td> <td class="px-4 py-3 text-sm text-gray-600">0.1 µF, 10 µF</td> <td class="px-4 py-3 text-sm text-gray-600">Condensateurs utilisés pour le découplage et le
+                        filtrage de l'alimentation.</td> <td class="px-4 py-3 text-sm text-gray-600">Les condensateurs sont essentiels pour stabiliser
+                        l'alimentation et réduire le bruit électrique. Les
+                        valeurs de 0.1 µF et 10 µF sont choisies pour couvrir
+                        une large gamme de fréquences de bruit.</td> </tr> <tr class="bg-gray-50"> <td class="px-4 py-3 text-sm font-medium text-gray-900">Diode de protection</td> <td class="px-4 py-3 text-sm text-gray-600">1N4007</td> <td class="px-4 py-3 text-sm text-gray-600">Diode utilisée pour la protection contre les inversions
+                        de polarité.</td> <td class="px-4 py-3 text-sm text-gray-600">La diode 1N4007 est utilisée pour protéger le circuit
+                        contre les inversions de polarité, assurant ainsi que
+                        les composants ne soient pas endommagés en cas de
+                        connexion incorrecte de la pile.</td> </tr> <tr> <td class="px-4 py-3 text-sm font-medium text-gray-900">Alimentation</td> <td class="px-4 py-3 text-sm text-gray-600">Pile 9V</td> <td class="px-4 py-3 text-sm text-gray-600">Pile fournissant une tension d'entrée de 9V.</td> <td class="px-4 py-3 text-sm text-gray-600">Une pile de 9V est utilisée pour fournir une tension
+                        d'entrée stable au régulateur de tension. Cela permet de
+                        s'assurer que le système reçoit une alimentation
+                        constante et fiable, tout en étant portable et facile à
+                        remplacer.</td> </tr> </tbody> </table> </div> </section> <!-- Schéma électronique --> <section id="schema" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+4. Schéma électronique et implantation
+</h2> <p class="text-gray-600">Logiciel : KiCAD</p> <br> <h2 class="text-l font-bold mb-4">
+circuit éléctrique sous kicad MPU6050 avec Arduino
+</h2> <img src="https://i.ibb.co/JWCpyBxb/Screenshot-from-2025-06-12-08-47-15.png" alt="circuit éléctrique Arduino avec MPU6050 et écran LCD I2C" class="rounded-lg shadow-md mx-auto mb-2" width="600"> <p class="text-sm text-gray-500 text-center">
+Source : <a href="https://drive.google.com/file/d/1iXxy7To9mSSoY5n62r_m2sU0hm5_-EHd/view?usp=sharing" target="_blank" rel="noopener noreferrer">Team epo</a> </p> <p class="text-gray-600">
+Fichier schéma KiCAD (.sch) : <a href="https://drive.google.com/file/d/11Q-OaHYAHimLCgFJlt2zVreR0DyQN0FJ/view?usp=drive_link" class="text-blue-500">Lien</a> </p> </section> <!-- Alimentation électrique --> <section id="alimentation" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+5. Alimentation électrique et justification
+</h2> <p class="text-gray-600">
+Topologie choisie : Entrée : 9 V DC (bloc secteur ou batterie).
+                Régulation : LM7805 (5 V, 1 A max).
+</p> <br> <h2 class="text-l font-bold mb-4">
+circuit éléctrique sous kicad Alimentation avec LM7805
+</h2> <img src="https://i.ibb.co/67BDFcRq/Screenshot-from-2025-06-12-09-07-12.png" alt="circuit éléctrique Alimentation avec LM7805" class="rounded-lg shadow-md mx-auto mb-2" width="600"> <p class="text-sm text-gray-500 text-center">
+Source : <a href="https://drive.google.com/file/d/1iXxy7To9mSSoY5n62r_m2sU0hm5_-EHd/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Team epo</a> </p> <br> <h2>
+Nous avons ensuite soudés tous les éléments de l'alimentation
+                sur une platine d'essaie
+</h2> <img src="https://i.ibb.co/dsFzfjX2/Whats-App-Image-2025-06-12-at-09-17-45.jpg" alt="Whats-App-Image-2025-06-12-at-09-17-45" class="rounded-lg shadow-md mx-auto mb-2" width="200"> <p class="text-sm text-gray-500 text-center">Source : Team epo</p> </section> <!-- Câblage et connectique --> <section id="cablage" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+6. Câblage et connectique
+</h2> <div class="overflow-x-auto mb-6"> <table class="w-full border border-gray-200 rounded-lg overflow-hidden"> <thead class="bg-gray-50"> <tr> <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Module / Composant</th> <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Broche</th> <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Arduino Uno</th> </tr> </thead> <tbody class="divide-y divide-gray-200"> <tr> <td class="px-4 py-3 text-sm font-medium text-gray-900">MPU6050 VCC</td> <td class="px-4 py-3 text-sm text-gray-600">VCC</td> <td class="px-4 py-3 text-sm text-gray-600">5 V régulé</td> </tr> <tr class="bg-gray-50"> <td class="px-4 py-3 text-sm font-medium text-gray-900">MPU6050 GND</td> <td class="px-4 py-3 text-sm text-gray-600">GND</td> <td class="px-4 py-3 text-sm text-gray-600">GND</td> </tr> <tr> <td class="px-4 py-3 text-sm font-medium text-gray-900">MPU6050 SDA</td> <td class="px-4 py-3 text-sm text-gray-600">SDA</td> <td class="px-4 py-3 text-sm text-gray-600">A4</td> </tr> <tr class="bg-gray-50"> <td class="px-4 py-3 text-sm font-medium text-gray-900">MPU6050 SCL</td> <td class="px-4 py-3 text-sm text-gray-600">SCL</td> <td class="px-4 py-3 text-sm text-gray-600">A5</td> </tr> </tbody> </table> <br> <h2 class="text-xl font-bold mb-4">
+Schéma de câblage MPU6050 avec Arduino
+</h2> <img src="http://electronoobs.com/images/Arduino/tut_76/sch_1.jpg" alt="Schéma de câblage Arduino avec MPU6050 et écran LCD I2C" class="rounded-lg shadow-md mx-auto mb-2" width="600"> <p class="text-sm text-gray-500 text-center">
+Source : <a href="http://electronoobs.com/eng_arduino_tut76.php" target="_blank" rel="noopener noreferrer">Electronoobs – Tuto Arduino MPU6050 + LCD</a> </p> </div> </section> <!-- Code Arduino --> <section id="code" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+7. Code Arduino
+</h2> <p class="text-gray-600 mb-4">
+Le code Arduino est structuré pour lire les données du capteur
+                MPU6050, les traiter, et afficher les résultats sur un écran
+                LCD. Voici une explication des parties clés du code :
+</p> <div class="bg-gray-100 rounded-lg p-6 mb-6"> <h3 class="font-semibold text-gray-900 mb-3">
+Bibliothèques utilisées
+</h3> <p class="text-gray-600">
+Le code utilise les bibliothèques suivantes pour faciliter la
+                  communication avec les composants matériels :
+</p> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li> <strong>Wire.h</strong> : Pour la communication I2C, utilisée
+                    pour interagir avec les périphériques I2C comme le MPU6050 et
+                    l'écran LCD.
+</li> <li> <strong>MPU6050.h</strong> : Fournit des fonctions pour lire
+                    les données du capteur MPU6050.
+</li> <li> <strong>LiquidCrystal_I2C.h</strong> : Permet de contrôler facilement
+                    un écran LCD via I2C.
+</li> </ul> </div> <div class="bg-gray-100 rounded-lg p-6 mb-6"> <h3 class="font-semibold text-gray-900 mb-3">
+Initialisation des objets
+</h3> <p class="text-gray-600">
+Les objets pour le MPU6050 et l'écran LCD sont initialisés
+                  pour établir la communication :
+</p> <pre class="bg-gray-800 text-white p-4 rounded">MPU6050 mpu;
+LiquidCrystal_I2C lcd(0x27, 16, 2);</pre> </div> <div class="bg-gray-100 rounded-lg p-6 mb-6"> <h3 class="font-semibold text-gray-900 mb-3">
+Configuration initiale (setup)
+</h3> <p class="text-gray-600">
+Dans la fonction <code>setup()</code>, la communication I2C et
+                  série est démarrée, et le capteur MPU6050 est initialisé :
+</p> <pre class="bg-gray-800 text-white p-4 rounded">void setup() &#123;
+  Wire.begin();
+  Serial.begin(9600);
+  mpu.initialize();
+
+  if (mpu.testConnection()) &#123;
+    Serial.println("MPU6050 OK");
+  &#125; else &#123;
+    Serial.println("Erreur MPU6050 !");
+    while (1);
+  &#125;
+
+  lcd.init();
+  lcd.backlight();
+&#125;
+</pre> </div> <div class="bg-gray-100 rounded-lg p-6 mb-6"> <h3 class="font-semibold text-gray-900 mb-3">
+Boucle principale (loop)
+</h3> <p class="text-gray-600">
+La fonction <code>loop()</code> lit les données du capteur, les
+                  convertit, détecte la direction du mouvement, et affiche les résultats
+                  sur l'écran LCD :
+</p> <pre class="bg-gray-800 text-white p-4 rounded">void loop() &#123;
+  int16_t ax, ay, az, gx, gy, gz;
+  mpu.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+
+  float ax_ms2 = ax / 16384.0 * 9.81;
+  float ay_ms2 = ay / 16384.0 * 9.81;
+  float az_ms2 = az / 16384.0 * 9.81;
+
+  String direction = detecterDirection(ax_ms2, ay_ms2, az_ms2);
+
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Direction:");
+  lcd.setCursor(0, 1);
+  lcd.print(direction);
+  delay(1000);
+&#125;
+</pre> </div> <div class="bg-gray-100 rounded-lg p-6"> <h3 class="font-semibold text-gray-900 mb-3">
+Détection de la direction
+</h3> <p class="text-gray-600">
+La fonction <code>detecterDirection</code> utilise les valeurs
+                  d'accélération pour déterminer la direction du mouvement :
+</p> <pre class="bg-gray-800 text-white p-4 rounded">String detecterDirection(float ax, float ay, float az) &#123;
+  if (az &gt; seuil) return "Haut";
+  if (az &lt; -seuil) return "Bas";
+  if (ax &gt; seuil) return "Droite";
+  if (ax &lt; -seuil) return "Gauche";
+  if (ay &gt; seuil) return "Avant";
+  if (ay &lt; -seuil) return "Arriere";
+  return "Stable";
+&#125;
+</pre> </div> <p class="text-gray-600">
+Fichier complet (code.ino) : <a href="https://drive.google.com/file/d/1UQ5q7gsYQzjj3wfVihF71GX_sRFqvZ5x/view?usp=drive_link" class="text-blue-500">Lien</a> </p> </section> <!-- Tests et résultats --> <section id="tests" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+8. Tests et résultats
+</h2> <p class="text-gray-600">
+Test de connexion I²C au démarrage (testConnection). Valeurs
+                statiques au repos : (0 g, 0 g, 1 g).
+</p> </section> <!-- Boîtier 3D --> <section id="boitier-3d" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+9. Boîtier 3D
+</h2> <p class="text-gray-600">
+Pour protéger et organiser le circuit, nous avons conçu un
+                boîtier 3D. Voici les détails de l'impression et de l'assemblage
+                :
+</p> <img src="https://via.placeholder.com/600x400" alt="Boîtier 3D" class="rounded-lg shadow-md mx-auto mb-2" width="600"> <p class="text-sm text-gray-500 text-center">
+Source : <a href="https://example.com/3d-case" target="_blank" rel="noopener noreferrer">Lien vers le fichier STL</a> </p> </section> <!-- Démonstration sans boîtier --> <section id="demo-sans-boitier" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+10. Démonstration sans boîtier
+</h2> <p class="text-gray-600">
+Voici une démonstration du circuit sans boîtier :
+</p> <div style="padding:56.25% 0 0 0;position:relative;"> <iframe src="https://player.vimeo.com/video/1092774330?h=29b18b8097&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="demo sans boîtier 3D"></iframe> </div> <script type="module" src="/2025-Team-EPO-Docs/_astro/test1.astro_astro_type_script_index_0_lang.DRbxEomH.js"></script> </section> <!-- Démonstration finale --> <section id="demo-final" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+11. Démonstration finale
+</h2> <p class="text-gray-600">
+Voici la démonstration finale du circuit avec le boîtier 3D :
+</p> <div style="padding:56.25% 0 0 0;position:relative;"> <iframe src="https://player.vimeo.com/video/1092774330?h=29b18b8097&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="demo finale"></iframe> </div> <script type="module" src="/2025-Team-EPO-Docs/_astro/test1.astro_astro_type_script_index_1_lang.DRbxEomH.js"></script> </section> <!-- Conclusion --> <section id="conclusion" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+12. Conclusion
+</h2> <p class="text-gray-600">
+Le LM7805 s’est avéré fiable malgré l’avantage théorique de
+                l’AMS1117. La communication I²C MPU6050–Arduino est stable.
+</p> </section> <!-- Galerie d'images --> <section id="galerie-images" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+Galerie d'Images
+</h2> <p class="text-gray-600 mb-4">
+Voici quelques prises de vue lors des travaux :
+</p> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> <div class="rounded-lg overflow-hidden shadow-md"> <img src="https://i.ibb.co/0j8GNxw9/IMG-5130.jpg" alt="IMG-5130" class="w-full"> </div> <div class="rounded-lg overflow-hidden shadow-md"> <img src="https://i.ibb.co/99tkgWgn/IMG-5129.jpg" alt="IMG-5129" class="w-full"> </div> <div class="rounded-lg overflow-hidden shadow-md"> <img src="https://i.ibb.co/fcfyfgc/IMG-5128.jpg" alt="IMG-5128" class="w-full"> </div> <div class="rounded-lg overflow-hidden shadow-md"> <img src="https://i.ibb.co/fzHdMsXN/IMG-5127.jpg" alt="IMG-5127" class="w-full"> </div> <div class="rounded-lg overflow-hidden shadow-md"> <img src="https://i.ibb.co/0RWvs1Sp/IMG-5126.jpg" alt="IMG-5126" class="w-full"> </div> </div> </section> <!-- Annexes --> <section id="annexes" class="p-8"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+13. Annexes et liens Drive
+</h2> <p class="text-gray-600">
+KiCAD – projet complet (schémas) : <a href="https://drive.google.com/drive/folders/1s983p2FVP6-m2fNSdQGJfppfBWyWsdeR?usp=drive_link" class="text-blue-500">Lien</a> </p> <p class="text-gray-600">
+Projet (schéma + code) : <a href="https://drive.google.com/drive/folders/1s983p2FVP6-m2fNSdQGJfppfBWyWsdeR?usp=drive_link" class="text-blue-500">Lien</a> </p> <p class="text-gray-600">
+Photos et vidéo de test : <a href="https://drive.google.com/drive/folders/1s983p2FVP6-m2fNSdQGJfppfBWyWsdeR?usp=drive_link" class="text-blue-500">Lien</a> </p> </section> </div> </div> </div> </div> </main>  <script type="module">document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll('a[href^="#"]').forEach(t=>{t.addEventListener("click",function(e){e.preventDefault();const n=document.querySelector(this.getAttribute("href"));n&&n.scrollIntoView({behavior:"smooth",block:"start"})})})});function a(){const i=document.querySelector("#search-input"),t=document.querySelector("#search-results");!i||!t||(i.addEventListener("input",function(e){const n=e.target.value.toLowerCase().trim();if(n.length<2){t.innerHTML="",t.classList.add("hidden");return}document.body.textContent.toLowerCase();const c=document.querySelectorAll("section[id], div[id]"),r=[];c.forEach(o=>{const s=o.textContent.toLowerCase();if(s.includes(n)){const d=o.querySelector("h1, h2, h3")?.textContent||"Section";r.push({title:d,id:o.id,snippet:s.substr(s.indexOf(n)-50,100)})}}),r.length>0?(t.innerHTML=r.map(o=>`
+              <div class="p-3 hover:bg-gray-100 cursor-pointer border-b">
+                <a href="#${o.id}" class="block">
+                  <div class="font-medium text-primary-600">${o.title}</div>
+                  <div class="text-sm text-gray-600 truncate">${o.snippet}</div>
+                </a>
+              </div>
+            `).join(""),t.classList.remove("hidden")):(t.innerHTML='<div class="p-3 text-gray-500">Aucun résultat trouvé</div>',t.classList.remove("hidden"))}),document.addEventListener("click",function(e){!i.contains(e.target)&&!t.contains(e.target)&&t.classList.add("hidden")}))}function l(){document.querySelectorAll("pre code").forEach(t=>{const e=document.createElement("button");e.className="absolute top-2 right-2 px-2 py-1 bg-gray-700 text-white text-xs rounded hover:bg-gray-600 transition-colors",e.textContent="Copier";const n=t.parentElement;n.style.position="relative",n.appendChild(e),e.addEventListener("click",function(){navigator.clipboard.writeText(t.textContent).then(()=>{e.textContent="Copié !",setTimeout(()=>{e.textContent="Copier"},2e3)})})})}document.addEventListener("DOMContentLoaded",function(){a(),l()});</script> </body> </html>

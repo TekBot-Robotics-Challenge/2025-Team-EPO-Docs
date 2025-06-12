@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="fr"> <head><meta charset="UTF-8"><meta name="description" content="Documentation technique complète pour le Tekbot Robotics Challenge 2025"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/2025-Team-EPO-Docsfavicon.svg"><meta name="generator" content="Astro v5.9.2"><title>Test Informatique – Documentation Complète</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/2025-Team-EPO-Docs/_astro/index.CcRQwRFP.css"></head> <body class="bg-gray-50 text-gray-900 font-sans">  <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <!-- Logo and title --> <div class="flex items-center space-x-4"> <div class="flex items-center space-x-2"> <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center"> <span class="text-white font-bold text-lg">T</span> </div> <div> <h1 class="text-xl font-bold text-gray-900">TRC2K25</h1> <p class="text-xs text-gray-500">Documentation Technique</p> </div> </div> </div> <!-- Navigation --> <nav class="hidden md:flex items-center space-x-8"> <a href="/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-50">
+Accueil
+</a> <a href="/electronique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-electronics-600 hover:bg-gray-50">
+Électronique
+</a> <a href="/informatique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-informatics-600 bg-blue-50">
+Informatique
+</a> <a href="/mecanique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-mechanics-600 hover:bg-gray-50">
+Mécanique
+</a> <a href="/test-final/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-testing-600 hover:bg-gray-50">
+Test Final
+</a> <a href="https://github.com/username/trc2k25-documentation" target="_blank" class="text-gray-700 hover:text-gray-900 transition-colors" aria-label="Voir sur GitHub"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path> </svg> </a> </nav> <!-- Mobile menu button --> <div class="md:hidden"> <button type="button" class="text-gray-700 hover:text-gray-900 focus:outline-none focus:text-gray-900" id="mobile-menu-button"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile menu --> <div class="md:hidden hidden" id="mobile-menu"> <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200"> <a href="/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">Accueil</a> <a href="/electronique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-electronics-600 hover:bg-gray-50 rounded-md">Électronique</a> <a href="/informatique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-informatics-600 hover:bg-gray-50 rounded-md">Informatique</a> <a href="/mecanique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-mechanics-600 hover:bg-gray-50 rounded-md">Mécanique</a> <a href="/test-final/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-testing-600 hover:bg-gray-50 rounded-md">Test Final</a> </div> </div> </div> </header> <script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("mobile-menu-button"),n=document.getElementById("mobile-menu");e&&n&&e.addEventListener("click",function(){n.classList.toggle("hidden")})});</script> <main class="min-h-screen bg-gray-50"> <!-- Page Header --> <section class="bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-16"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex items-center space-x-4 mb-6"> <div class="w-16 h-16 bg-white bg-opacity-20 rounded-lg flex items-center justify-center text-3xl">
+🤖
+</div> <div> <h1 class="text-4xl md:text-5xl font-bold">
+Test Informatique
+</h1> <p class="text-xl opacity-90 mt-2">
+Création d'une classe « Robot » en C++
+</p> </div> </div> </div> </section> <!-- Content --> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"> <div class="flex flex-col lg:flex-row gap-8"> <!-- Sidebar TOC --> <aside class="lg:w-64 flex-shrink-0"> <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 sticky top-20"> <h2 class="text-lg font-semibold text-gray-900 mb-4">
+Table des Matières
+</h2> <nav class="space-y-2"> <a href="#introduction" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">1. Introduction</a> <a href="#objectifs" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">2. Objectifs</a> <a href="#uml" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">3. Diagramme de classes UML</a> <a href="#uml-explication" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">4. Explication détaillée du diagramme UML</a> <a href="#classes" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">5. Description des classes</a> <a href="#code" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">6. Code source et organisation</a> <a href="#code-explications" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">7. Explications pas-à-pas du code</a> <a href="#tests" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">8. Scénarios de test et résultats</a> <a href="#conclusion" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">9. Conclusion</a> <a href="#annexes" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">10. Annexes et liens Drive</a> </nav> </div> </aside> <!-- Main Content --> <div class="flex-1"> <div class="bg-white rounded-lg shadow-sm border border-gray-200"> <!-- Introduction --> <section id="introduction" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+1. Introduction
+</h2> <p class="text-gray-600">
+L’objectif de ce test est de démontrer la
+                                maîtrise des principes de la programmation
+                                orientée objet en C++ : encapsulation, héritage,
+                                et polymorphisme. Nous élaborons une classe
+                                générale Robot pour représenter un robot
+                                générique, puis deux spécialisations :
+                                robot chirurgical (robot à roues) et drone
+                                (robot volant). Chacune redéfinit la méthode
+                                virtuelle move() pour illustrer le
+                                polymorphisme.
+</p> </section> <!-- Objectifs --> <section id="objectifs" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+2. Objectifs
+</h2> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>
+Créer une classe de base Robot avec
+                                    attributs protégés et accès via
+                                    getters/setters.
+</li> <li>
+Définir au moins deux sous-classes héritant
+                                    de Robot.
+</li> <li>
+Implémenter une méthode virtuelle
+                                    move(double dx, double dy) dans Robot et la
+                                    redéfinir dans les sous-classes.
+</li> <li>
+Documenter l’architecture via un diagramme
+                                    UML.
+</li> <li>
+Rédiger un code propre, modulaire, bien
+                                    commenté et conforme aux bonnes pratiques
+                                    .
+</li> <li>
+Mettre en place des scénarios de test
+                                    démonstratifs.
+</li> </ul> </section> <!-- Diagramme de classes UML --> <section id="uml" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+3. Diagramme de classes UML
+</h2> <p class="text-gray-600">
+Fichier source PNG/Visio/SVG (UML_DIAGRAM_ID) :
+<a href="https://drive.google.com/file/d/UML_DIAGRAM_ID/view?usp=sharing" class="text-purple-500">Lien</a> </p> </section> <!-- Explication détaillée du diagramme UML --> <section id="uml-explication" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+4. Explication détaillée du diagramme UML
+</h2> <p class="text-gray-600">
+Le diagramme comporte trois classes : Robot
+                                (classe abstraite de base), WheeledRobot (hérite
+                                de Robot), et FlyingRobot (hérite de Robot). Les
+                                flèches pleines à gauche représentent
+                                l’héritage. La méthode move est déclarée
+                                virtuelle dans Robot pour permettre le
+                                comportement polymorphe.
+</p> </section> <!-- Description des classes --> <section id="classes" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+5. Description des classes
+</h2> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
+5.1 Classe Robot
+</h3> <p class="text-gray-600">
+Fichier: Robot.h / Robot.cpp. Rôle:
+                                    structure de base pour tout type de robot.
+                                    Encapsulation: attributs protégés, accès par
+                                    getters/setters. Constructeur initialise
+                                    name_, posX_ et posY_ à (0,0). move(dx, dy):
+                                    méthode virtuelle, applique un simple
+                                    changement de position.
+</p> </div> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
+5.2 Classe WheeledRobot
+</h3> <p class="text-gray-600">
+Fichier: WheeledRobot.h / WheeledRobot.cpp.
+                                    Héritage public de Robot. Ajoute l’attribut
+                                    wheelCount_. move override : Calcule la
+                                    distance comme sqrt(dx² + dy²) et met à jour
+                                    la position via setPosition.
+</p> </div> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
+5.3 Classe FlyingRobot
+</h3> <p class="text-gray-600">
+Fichier: FlyingRobot.h / FlyingRobot.cpp.
+                                    Héritage public de Robot. Ajoute
+                                    maxAltitude_. move override : Affiche un
+                                    message de vol et met à jour la position en
+                                    XY, altitude conservée en interne.
+</p> </div> </section> <!-- Code source et organisation --> <section id="code" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+6. Code source et organisation
+</h2> <p class="text-gray-600">
+Le projet est structuré en dossier C++ classique
+                                : /src avec Robot.h, Robot.cpp, WheeledRobot.h,
+                                WheeledRobot.cpp, FlyingRobot.h,
+                                FlyingRobot.cpp, et main.cpp.
+</p> <p class="text-gray-600">
+Archive ZIP complète :
+<a href="https://drive.google.com/file/d/ROBOT_PROJECT_ZIP_ID/view?usp=sharing" class="text-purple-500">Lien</a> </p> </section> <!-- Explications pas-à-pas du code --> <section id="code-explications" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+7. Explications pas-à-pas du code
+</h2> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
+7.1 Robot.h
+</h3> <p class="text-gray-600">
+Inclusion des headers <string>
+et <iostream>. Déclaration de la classe avec
+                                            méthodes et attributs. Méthodes
+                                            getX(), getY(), getName() sont
+                                            const.
+</iostream> </string> </p><div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
+7.2 Robot.cpp
+</h3> <p class="text-gray-600">
+Implémentation du constructeur,
+                                            destructeur virtuel (vide). move(dx,
+                                            dy) met à jour la position simple.
+                                            get/set fournissent accès sécurisé.
+</p> </div> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
+7.3 WheeledRobot.h / .cpp
+</h3> <p class="text-gray-600">
+Constructeur appelle Robot(name)
+                                            puis initialise wheelCount_. move
+                                            utilise override pour garantir la
+                                            bonne surcharge.
+</p> </div> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
+7.4 FlyingRobot.h / .cpp
+</h3> <p class="text-gray-600">
+Même principe que WheeledRobot,
+                                            stocke maxAltitude_.
+</p> </div> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
+7.5 main.cpp
+</h3> <p class="text-gray-600">
+Instanciation via pointeurs Robot*
+                                            pour illustrer le polymorphisme.
+                                            Appel à move sur chaque objet
+                                            déclenche la bonne version selon le
+                                            type dynamique. Suppression via
+                                            delete pour démontrer l’importance
+                                            du destructeur virtuel.
+</p> </div>  <!-- Scénarios de test et résultats --> <section id="tests" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+8. Scénarios de test et résultats
+</h2> <p class="text-gray-600">
+Code de test (main.cpp) : Instanciation
+                                        de WheeledRobot et FlyingRobot, appel à
+                                        move, et affichage des résultats.
+</p> <pre class="bg-gray-800 text-white p-4 rounded">int main() &#123;
+    Robot* r1 = new WheeledRobot("Rover", 4);
+    Robot* r2 = new FlyingRobot("Eagle", 1200.0);
+
+    r1->move(5.0, 3.0);
+    r2->move(2.0, -1.0);
+
+    delete r1;
+    delete r2;
+    return 0;
+&#125;</pre> <p class="text-gray-600">
+Sorties console : WheeledRobot Rover
+                                        rolls by (5, 3) on 4 wheels. FlyingRobot
+                                        Eagle flies to (2, -1, 0) at altitude
+                                        1200.
+</p> </section> <!-- Conclusion --> <section id="conclusion" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+9. Conclusion
+</h2> <p class="text-gray-600">
+Nous avons mis en œuvre une hiérarchie
+                                        de classes C++ démontrant
+                                        l’encapsulation des données via
+                                        getters/setters, l’héritage pour
+                                        factoriser le code commun, et le
+                                        polymorphisme à l’exécution grâce à une
+                                        méthode virtuelle. Le code est
+                                        modulaire, commenté et extensible.
+</p> </section> <!-- Annexes --> <section id="annexes" class="p-8"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+10. Annexes et liens Drive
+</h2> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>
+Diagramme UML (PNG/SVG) : <a href="https://drive.google.com/file/d/UML_DIAGRAM_ID/view" class="text-purple-500">Lien</a> </li> <li>
+Code source complet (ZIP) : <a href="https://drive.google.com/file/d/ROBOT_PROJECT_ZIP_ID/view" class="text-purple-500">Lien</a> </li> <li>
+Documentation Doxygen générée (HTML)
+                                            : <a href="https://drive.google.com/drive/folders/DOXYGEN_DOC_ID" class="text-purple-500">Lien</a> </li> </ul> </section> </div> </section> </div> </div> </div> </div> </main> <script type="module">document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll('a[href^="#"]').forEach(t=>{t.addEventListener("click",function(e){e.preventDefault();const n=document.querySelector(this.getAttribute("href"));n&&n.scrollIntoView({behavior:"smooth",block:"start"})})})});function a(){const i=document.querySelector("#search-input"),t=document.querySelector("#search-results");!i||!t||(i.addEventListener("input",function(e){const n=e.target.value.toLowerCase().trim();if(n.length<2){t.innerHTML="",t.classList.add("hidden");return}document.body.textContent.toLowerCase();const c=document.querySelectorAll("section[id], div[id]"),r=[];c.forEach(o=>{const s=o.textContent.toLowerCase();if(s.includes(n)){const d=o.querySelector("h1, h2, h3")?.textContent||"Section";r.push({title:d,id:o.id,snippet:s.substr(s.indexOf(n)-50,100)})}}),r.length>0?(t.innerHTML=r.map(o=>`
+              <div class="p-3 hover:bg-gray-100 cursor-pointer border-b">
+                <a href="#${o.id}" class="block">
+                  <div class="font-medium text-primary-600">${o.title}</div>
+                  <div class="text-sm text-gray-600 truncate">${o.snippet}</div>
+                </a>
+              </div>
+            `).join(""),t.classList.remove("hidden")):(t.innerHTML='<div class="p-3 text-gray-500">Aucun résultat trouvé</div>',t.classList.remove("hidden"))}),document.addEventListener("click",function(e){!i.contains(e.target)&&!t.contains(e.target)&&t.classList.add("hidden")}))}function l(){document.querySelectorAll("pre code").forEach(t=>{const e=document.createElement("button");e.className="absolute top-2 right-2 px-2 py-1 bg-gray-700 text-white text-xs rounded hover:bg-gray-600 transition-colors",e.textContent="Copier";const n=t.parentElement;n.style.position="relative",n.appendChild(e),e.addEventListener("click",function(){navigator.clipboard.writeText(t.textContent).then(()=>{e.textContent="Copié !",setTimeout(()=>{e.textContent="Copier"},2e3)})})})}document.addEventListener("DOMContentLoaded",function(){a(),l()});</script> </body> </html>
