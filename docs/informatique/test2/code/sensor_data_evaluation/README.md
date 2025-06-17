@@ -1,5 +1,4 @@
-# Création du README.md pour le test ROS2 (Test 2)
-readme = """
+
 # 🧪 ROS2 Test 2 – Sensor Data Evaluation
 
 Ce projet est un exercice pratique pour découvrir les bases de ROS2 à travers la création d’un système Publisher/Subscriber.
