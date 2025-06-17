@@ -1,253 +1,216 @@
-<!DOCTYPE html><html lang="fr"> <head><meta charset="UTF-8"><meta name="description" content="Documentation technique complète pour le Tekbot Robotics Challenge 2025"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/2025-Team-EPO-Docsfavicon.svg"><meta name="generator" content="Astro v5.9.2"><title>Documentation Complète du Module robot.py</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/2025-Team-EPO-Docs/index.CcRQwRFP.css"></head> <body class="bg-gray-50 text-gray-900 font-sans">  <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <!-- Logo and title --> <div class="flex items-center space-x-4"> <div class="flex items-center space-x-2"> <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center"> <span class="text-white font-bold text-lg">T</span> </div> <div> <h1 class="text-xl font-bold text-gray-900">TRC2K25</h1> <p class="text-xs text-gray-500">Documentation Technique</p> </div> </div> </div> <!-- Navigation --> <nav class="hidden md:flex items-center space-x-8"> <a href="/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-50">
+<!DOCTYPE html><html lang="fr"> <head><meta charset="UTF-8"><meta name="description" content="Documentation technique complète pour le Tekbot Robotics Challenge 2025"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/2025-Team-EPO-Docsfavicon.svg"><meta name="generator" content="Astro v5.9.2"><title>Test Informatique 2 – ROS2</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/2025-Team-EPO-Docs/_astro/index.B-ucP8IW.css"></head> <body class="bg-gray-50 text-gray-900 font-sans">  <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <!-- Logo and title --> <div class="flex items-center space-x-4"> <div class="flex items-center space-x-2"> <!-- <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-lg">T</span>
+          </div> --> <img src="/2025-Team-EPO-Docs/Logo.svg" alt="Logo" class="h-100"> <!-- <div>
+            <h1 class="text-xl font-bold text-gray-900">TRC2K25</h1>
+            <p class="text-xs text-gray-500">Documentation Technique</p>
+          </div> --> </div> </div> <!-- Navigation --> <nav class="hidden md:flex items-center space-x-8"> <a href="/2025-Team-EPO-Docs/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-50">
 Accueil
 </a> <a href="/2025-Team-EPO-Docs/electronique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-electronics-600 hover:bg-gray-50">
 Électronique
-</a> <a href="/2025-Team-EPO-Docs/informatique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-informatics-600 hover:bg-gray-50">
+</a> <a href="/2025-Team-EPO-Docs/informatique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-informatics-600 bg-blue-50">
 Informatique
 </a> <a href="/2025-Team-EPO-Docs/mecanique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-mechanics-600 hover:bg-gray-50">
 Mécanique
 </a> <a href="/2025-Team-EPO-Docs/test-final/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-testing-600 hover:bg-gray-50">
 Test Final
-</a> <a href="https://github.com/username/trc2k25-documentation" target="_blank" class="text-gray-700 hover:text-gray-900 transition-colors" aria-label="Voir sur GitHub"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path> </svg> </a> </nav> <!-- Mobile menu button --> <div class="md:hidden"> <button type="button" class="text-gray-700 hover:text-gray-900 focus:outline-none focus:text-gray-900" id="mobile-menu-button"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile menu --> <div class="md:hidden hidden" id="mobile-menu"> <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200"> <a href="/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">Accueil</a> <a href="/2025-Team-EPO-Docs/electronique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-electronics-600 hover:bg-gray-50 rounded-md">Électronique</a> <a href="/2025-Team-EPO-Docs/informatique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-informatics-600 hover:bg-gray-50 rounded-md">Informatique</a> <a href="/mecanique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-mechanics-600 hover:bg-gray-50 rounded-md">Mécanique</a> <a href="/test-final/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-testing-600 hover:bg-gray-50 rounded-md">Test Final</a> </div> </div> </div> </header> <script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("mobile-menu-button"),n=document.getElementById("mobile-menu");e&&n&&e.addEventListener("click",function(){n.classList.toggle("hidden")})});</script> <main class="min-h-screen bg-gray-50"> <!-- Page Header --> <section class="bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-16"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex items-center space-x-4 mb-6"> <div class="w-16 h-16 bg-white bg-opacity-20 rounded-lg flex items-center justify-center text-3xl">
+</a> <a href="https://github.com/prohack001" target="_blank" class="text-gray-700 hover:text-gray-900 transition-colors" aria-label="Voir sur GitHub"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">...</svg> </a> </nav> <!-- Mobile menu button --> <div class="md:hidden"> <button type="button" class="text-gray-700 hover:text-gray-900 focus:outline-none focus:text-gray-900" id="mobile-menu-button"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile menu --> <div class="md:hidden hidden" id="mobile-menu"> <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200"> <a href="/2025-Team-EPO-Docs/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">Accueil</a> <a href="/2025-Team-EPO-Docs/electronique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-electronics-600 hover:bg-gray-50 rounded-md">Électronique</a> <a href="/2025-Team-EPO-Docs/informatique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-informatics-600 hover:bg-gray-50 rounded-md">Informatique</a> <a href="/2025-Team-EPO-Docs/mecanique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-mechanics-600 hover:bg-gray-50 rounded-md">Mécanique</a> <a href="/2025-Team-EPO-Docs/test-final/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-testing-600 hover:bg-gray-50 rounded-md">Test Final</a> </div> </div> </div> </header> <script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("mobile-menu-button"),n=document.getElementById("mobile-menu");e&&n&&e.addEventListener("click",function(){n.classList.toggle("hidden")})});</script> <main class="min-h-screen bg-gray-50"> <!-- Page Header --> <section class="bg-gradient-to-r from-green-500 to-teal-600 text-white py-16"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex items-center space-x-4 mb-6"> <div class="w-16 h-16 bg-white bg-opacity-20 rounded-lg flex items-center justify-center text-3xl">
 🤖
 </div> <div> <h1 class="text-4xl md:text-5xl font-bold">
-Documentation du Module robot.py
+Test Informatique 2 – ROS2
 </h1> <p class="text-xl opacity-90 mt-2">
-Implémentation d'une hiérarchie de classes Python
-                            pour différents types de robots
-</p> </div> </div> </div> </section> <!-- Content --> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"> <div class="flex flex-col lg:flex-row gap-8"> <!-- Sidebar TOC --> <aside class="lg:w-64 flex-shrink-0"> <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 sticky top-20"> <h2 class="text-lg font-semibold text-gray-900 mb-4">
+Conception d'un package ROS2 pour l'évaluation des données de
+              capteurs
+</p> </div> </div> <!-- <div class="bg-white bg-opacity-10 rounded-lg p-4 inline-block">
+          <span class="text-sm font-medium">Progression: Complété</span>
+        </div> --> </div> </section> <!-- Content --> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"> <div class="flex flex-col lg:flex-row gap-8"> <!-- Sidebar TOC --> <aside class="lg:w-64 flex-shrink-0"> <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 sticky top-20"> <h2 class="text-lg font-semibold text-gray-900 mb-4">
 Table des Matières
-</h2> <nav class="space-y-2"> <a href="#introduction" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">1. Introduction</a> <a href="#objectifs" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">2. Objectifs du module</a> <a href="#organisation" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">3. Organisation du code</a> <a href="#uml" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">4. Diagramme de classes UML</a> <a href="#uml-explication" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">5. Explication détaillée du diagramme UML</a> <a href="#classes" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">6. Description des classes et méthodes</a> <a href="#comportements" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">7. Comportements et algorithmes clés</a> <a href="#tests" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">8. Tests unitaires</a> <a href="#programme" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">9. Programme principal de démonstration</a> <a href="#qualite" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">10. Qualité du code et bonnes pratiques</a> <a href="#annexes" class="block text-sm text-gray-600 hover:text-purple-600 transition-colors py-1">11. Annexes et liens</a> </nav> </div> </aside> <!-- Main Content --> <div class="flex-1"> <div class="bg-white rounded-lg shadow-sm border border-gray-200"> <!-- Introduction --> <section id="introduction" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+</h2> <nav class="space-y-2"> <a href="#introduction" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">1. Introduction</a> <a href="#objectifs" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">2. Objectifs</a> <a href="#pre-requis" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">3. Prérequis</a> <a href="#structure" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">4. Structure du Projet</a> <a href="#description" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">5. Description des nœuds</a> <a href="#launch" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">6. Launch file</a> <a href="#execution" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">7. Exécution et résultats</a> <a href="#annexes" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">8. Annexes et liens</a> </nav> </div> </aside> <!-- Main Content --> <div class="flex-1"> <div class="bg-white rounded-lg shadow-sm border border-gray-200"> <!-- Introduction --> <section id="introduction" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
 1. Introduction
-</h2> <p class="text-gray-600">
-Le fichier robot.py implémente une hiérarchie de
-                                classes Python destinée à modéliser différents
-                                types de robots : un robot générique (Robot), un
-                                drone volant (Drone), et un robot chirurgical de
-                                haute précision (RobotChirurgical). Ce module
-                                illustre l’utilisation de l’encapsulation, de
-                                l’héritage et du polymorphisme en Python,
-                                complétée par des validations d’arguments
-                                robustes, une exception personnalisée
-                                (RobotError), et des tests unitaires exhaustifs.
-</p> </section> <!-- Objectifs du module --> <section id="objectifs" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
-2. Objectifs du module
-</h2> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>
-Mettre en pratique l’encapsulation
-                                    (attributs privés et getters/setters).
+</h2> <p class="text-gray-600 mb-4">
+Nous présentons ici notre travail pour le deuxième test
+                informatique, centré sur ROS2.
+</p> <p class="text-gray-600 mb-4">
+Nous avons pour mission de concevoir un package ROS2 nommé <strong>sensor_data_evaluation</strong>, comprenant deux nœuds Python :
+</p> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li> <strong>publisher_node</strong> : génère toutes les 0,5 s des mesures
+                  aléatoires de température, humidité et pression.
+</li> <li> <strong>subscriber_node</strong> : reçoit ces données, vérifie
+                  qu’elles sont dans des plages sûres et logue un message adapté.
+</li> </ul> <p class="text-gray-600 mb-4">
+Ce travail nous permet de maîtriser la publication/souscription
+                de messages, la configuration de QoS, et l’écriture d’un launch
+                file pour démarrer simultanément plusieurs nœuds.
+</p> </section> <!-- Objectifs --> <section id="objectifs" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+2. Objectifs
+</h2> <p class="text-gray-600 mb-4">Nous visons à :</p> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>
+Mettre en place un workflow ROS2 complet (structure de
+                  package, <code>setup.py</code>, <code>package.xml</code>).
 </li> <li>
-Démontrer l’héritage et le polymorphisme par
-                                    la redéfinition de la méthode move().
+Implémenter un publisher à fréquence fixe (2 Hz) avec <code>std_msgs/Float32MultiArray</code>.
 </li> <li>
-Gérer les erreurs métier avec une exception
-                                    dédiée (RobotError).
+Implémenter un subscriber capable de détecter et signaler les
+                  valeurs hors plage.
 </li> <li>
-Produire un code clair, documenté et testé
-                                    automatiquement.
-</li> </ul> </section> <!-- Organisation du code --> <section id="organisation" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
-3. Organisation du code
-</h2> <p class="text-gray-600">
-Le fichier robot.py est structuré comme suit :
-</p> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>
-Import des modules standards (math,
-                                    unittest).
-</li> <li>Déclaration de l’exception RobotError.</li> <li>Définition de la classe de base Robot.</li> <li>Définition de la sous-classe Drone.</li> <li>
-Définition de la sous-classe
-                                    RobotChirurgical.
+Créer un launch file Python afin de démarrer automatiquement
+                  nos deux nœuds.
 </li> <li>
-Trois classes de tests unitaires :
-                                    TestRobot, TestDrone, TestRobotChirurgical.
-</li> <li>
-Bloc if __name__ == "__main__": pour
-                                    démonstration interactive et lancement des
-                                    tests.
-</li> </ul> </section> <!-- Diagramme de classes UML --> <section id="uml" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
-4. Diagramme de classes UML
-</h2> <p class="text-gray-600">
-Un diagramme UML illustre la hiérarchie et les
-                                relations entre les classes Robot, Drone, et
-                                RobotChirurgical.
-</p> <h2 class="text-l font-bold mb-4">diagramme UML</h2> <img src="https://i.ibb.co/BV1t9C8d/Screenshot-from-2025-06-10-14-25-03-1.png" alt="diagramme UML " class="rounded-lg shadow-md mx-auto mb-2" width="600"> <p class="text-sm text-gray-500 text-center">
-Source : Team epo
-</p> <p class="text-gray-600">
-Fichier source Draw.io (XML) : <a href="https://drive.google.com/file/d/UML_SOURCE_ID/view?usp=sharing" class="text-purple-500">Lien</a> </p> </section> <!-- Explication détaillée du diagramme UML --> <section id="uml-explication" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
-5. Explication détaillée du diagramme UML
-</h2> <p class="text-gray-600">
-Le diagramme UML montre les relations entre les
-                                classes suivantes :
-</p> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>
-Robot : classe abstraite fonctionnelle qui
-                                    gère les attributs de base et les méthodes
-                                    principales.
-</li> <li>
-Drone : spécialisation de Robot avec des
-                                    attributs et méthodes supplémentaires pour
-                                    gérer l'altitude.
-</li> <li>
-RobotChirurgical : spécialisation de Robot
-                                    pour simuler un robot de chirurgie très
-                                    précis.
-</li> </ul> </section> <!-- Description des classes et méthodes --> <section id="classes" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
-6. Description des classes et méthodes
-</h2> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
-6.1 Exception RobotError
-</h3> <p class="text-gray-600">
-Hérite de Exception. Utilisée lorsque le nom
-                                    du robot est vide ou invalide (set_name,
-                                    constructeur).
-</p> </div> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
-6.2 Classe Robot
-</h3> <pre class="bg-gray-800 text-white p-4 rounded text-sm overflow-auto">class Robot:
-    def __init__(self, name: str, x: float = 0.0, y: float = 0.0) -&gt; None:
-        # Vérifie que `name` est une chaîne non vide, sinon lève `RobotError`.
-        # Initialise les attributs privés : `__name`, `__x`, `__y`, `__battery_level = 100.0`, `__is_active = False`.
+Valider visuellement le bon fonctionnement grâce à des
+                  captures d’écran et une vidéo de démonstration.
+</li> </ul> </section> <!-- Prérequis --> <section id="pre-requis" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+3. Prérequis
+</h2> <p class="text-gray-600 mb-4">Nous utilisons :</p> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>Ubuntu 22.04</li> <li>ROS2 Humble</li> <li>Python 3.8+</li> <li>Outils : git, colcon</li> </ul> </section> <!-- Structure du Projet --> <section id="structure" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+4. Structure du Projet
+</h2> <pre class="bg-gray-800 text-white p-4 rounded">                <code>
+sensor_data_evaluation/
+ • resource/sensor_data_evaluation
+ • sensor_data_evaluation/
+   – __init__.py
+   – publisher_node.py
+   – subscriber_node.py
+ • launch/
+   – sensor_launch.py
+ • package.xml
+ • setup.py
+ • README.md</code></pre> <br> <b class="text-gray-600 mb-4">
+• Dépôt GitHub complet : <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/tree/main/docs/informatique/test2/code/sensor_data_evaluation" class="text-ros-600 hover:underline">lien</a> </b> </section> <!-- Description des nœuds --> <section id="description" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+5. Description des nœuds
+</h2> <div class="bg-gray-50 rounded-lg p-6 mb-6"> <h3 class="font-semibold text-gray-900 mb-3">
+5.1 publisher_node.py
+</h3> <p class="text-gray-600 mb-4">
+Nous publions un message <code>Float</code> sur <code>/sensor_data</code> :
+</p> <pre class="bg-gray-800 text-white p-4 rounded">                  <code>
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import Float32MultiArray
+import random
 
-    # Getters/Setters
-    def get_name(self) -&gt; str:
-    def set_name(self, name: str) -&gt; None:
-    def get_position(self) -&gt; tuple:
-    def set_position(self, x: float, y: float) -&gt; None:
-    def get_battery(self) -&gt; float:
-    def set_battery(self, level: float) -&gt; None:
+class PublisherNode(Node):
+    def __init__(self):
+        # Initialisation du nœud avec le nom 'publisher_node'
+        super().&#95;&#95;init&#95;&#95;('publisher_node')
 
-    # Activation
-    def is_active(self) -&gt; bool:
-    def activate(self) -&gt; None:
-    def deactivate(self) -&gt; None:
+         
+        <p class="text-green-500">
+        """
+        Création d'un éditeur (publisher) qui envoie 
+        des messages de type Float32MultiArray
+        sur le topic '/sensor_data' avec une taille de file d'attente de 10
+        """
+         </p>
+        self.pub = self.create_publisher(Float32MultiArray, '/sensor_data', 10)
 
-    # Déplacement
-    def move(self, dx: float, dy: float) -&gt; bool:
-        # Valide que dx, dy sont numériques.
-        # Retourne False si is_active() est False ou batterie ≤ 0.
-        # Calcule distance = sqrt(dx^2 + dy^2), cost = distance * 1.0.
-        # Si batterie &lt; cost, retourne False.
-        # Sinon met à jour __x, __y, diminue __battery_level et retourne True.
+        <p class="text-green-500">    # Création d'un timer qui appelle la méthode publish_data toutes les 0.5 secondes
+        self.create_timer(0.5, self.publish_data)</p>        
 
-    # Représentations
-    def __str__(self) -&gt; str:
-    def __repr__(self) -&gt; str:
-</pre> </div> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
-6.3 Sous-classe Drone
-</h3> <pre class="bg-gray-800 text-white p-4 rounded text-sm overflow-auto">class Drone(Robot):
-    def __init__(self, name: str, x: float = 0.0, y: float = 0.0, z: float = 0.0) -&gt; None:
-        # Hérite de Robot, appelle `super().__init__(…)`.
-        # Vérifie que `z` est numérique et ≥ 0, sinon `ValueError`.
-        # `__max_altitude` fixé à 500 m.
+    def publish_data(self):
+        # Création d'un message de type Float32MultiArray
+        msg = Float32MultiArray()
 
-    def move(self, dx: float, dy: float, dz: float = 0.0) -&gt; bool:
-        # Validateurs numériques.
-        # Vérifie activation et batterie &gt; 0.
-        # Calcule `new_altitude = __z + dz`, assure 0 ≤ new_altitude ≤ max.
-        # Calcule distance 3D et `cost = distance * 1.5`.
-        # Si batterie &lt; cost, retourne False, sinon met à jour position 2D, __z, batterie.
+        # Remplissage du message avec des données aléatoires simulées
+        msg.data = [
+            random.uniform(15.0, 35.0),  # Température aléatoire 
+            random.uniform(30.0, 70.0),  # Humidité aléatoire 
+            random.uniform(950.0, 1050.0)  # Pression aléatoire 
+        ]
 
-    def get_altitude(self) -&gt; float:
-    def set_altitude(self, z: float) -&gt; None:
-    def get_max_altitude(self) -&gt; float:
-</pre> </div> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
-6.4 Sous-classe RobotChirurgical
-</h3> <pre class="bg-gray-800 text-white p-4 rounded">class RobotChirurgical(Robot):
-    def __init__(self, name: str, x: float = 0.0, y: float = 0.0, precision: float = 0.1) -> None:
-        # Hérite de Robot.
-        # `precision` doit être numérique > 0, arrondi minimal à 0.01 mm.
+        # Publication du message
+        self.pub.publish(msg)
 
-    def move(self, dx: float, dy: float) -> bool:
-        # Calcule distance 2D.
-        # Coût = distance × (10 / precision).
-        # Arrondit `dx`, `dy` à la grille de précision.
+        # Affichage des données publiées dans le log
+        self.get_logger().info(
+            f'Publié → T:&#123;msg.data[0]:.1f&#125;°C H:&#123;
+            msg.data[1]:.1f&#125;% P:&#123;msg.data[2]:.1f&#125;hPa'
+        )
 
-    def get_precision(self) -> float:
-    def set_precision(self, p: float) -> None:
-    def perform_surgery(self) -> bool:
-        # Exige `is_active()`, batterie ≥ 20 %, precision ≤ 0.5 mm.
-        # Consomme 15 % de batterie et retourne True, sinon retourne False.</pre> </div> </section> <!-- Comportements et algorithmes clés --> <section id="comportements" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
-7. Comportements et algorithmes clés
-</h2> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
-7.1 Gestion du nom et de la position
-</h3> <p class="text-gray-600">
-Validation stricte pour éviter les états
-                                    invalides. Encapsulation via attributs
-                                    privés et getters/setters.
-</p> </div> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
-7.2 Activation et niveau de batterie
-</h3> <p class="text-gray-600">
-Le robot ne peut se déplacer que s’il est
-                                    activé et dispose d’une batterie suffisante.
-                                    Recharge possible via `set_battery`,
-                                    toujours encadrée entre 0 et 100 %.
-</p> </div> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
-7.3 Déplacement en 2D (Robot)
-</h3> <p class="text-gray-600">
-Distance euclidienne classique, coût
-                                    énergétique linéaire. Retour booléen
-                                    indiquant le succès ou l’échec du mouvement.
-</p> </div> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
-7.4 Vol en 3D (Drone)
-</h3> <p class="text-gray-600">
-Transition de la position 2D à 3D avec
-                                    gestion de l’altitude. Coût énergétique
-                                    majoré (× 1.5). Vérifications des limites
-                                    d’altitude.
-</p> </div> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
-7.5 Opérations chirurgicales
-                                    (RobotChirurgical)
-</h3> <p class="text-gray-600">
-Précision influe sur le coût : plus la
-                                    précision est fine, plus le coût est élevé.
-                                    Possibilité d’arrondir les déplacements à la
-                                    précision souhaitée. Procédure de chirurgie
-                                    simulée avec conditions d’échec si
-                                    insatisfaites.
-</p> </div> </section> <!-- Tests unitaires --> <section id="tests" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
-8. Tests unitaires
-</h2> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
-8.1 Organisation des tests
-</h3> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>
-TestRobot : Initialisation
-                                        valide/invalide, activation, mouvement,
-                                        batterie, chaînes vides.
+def main():
+    # Initialisation de ROS 2
+    rclpy.init()
+
+    # Création d'une instance de PublisherNode
+    node = PublisherNode()
+
+    # Lancement du nœud et attente des signaux d'arrêt
+    rclpy.spin(node)
+
+    # Nettoyage : destruction du nœud et arrêt de ROS 2
+    node.destroy_node()
+    rclpy.shutdown()</code>
+
+  </pre> </div> <div class="bg-gray-50 rounded-lg p-6 mb-6"> <h3 class="font-semibold text-gray-900 mb-3">
+5.2 subscriber_node.py
+</h3> <p class="text-gray-600 mb-4">
+Nous recevons les données et validons chaque valeur :
+</p> <pre class="bg-gray-800 text-white p-4 rounded"><code>import rclpy
+from rclpy.node import Node
+from std_msgs.msg import Float32MultiArray
+
+class SubscriberNode(Node):
+    def __init__(self):
+        super().__init__('subscriber_node')
+        self.create_subscription(
+            Float32MultiArray, '/sensor_data', self.callback, 10)
+
+    def callback(self, msg):
+        t, h, p = msg.data
+        valid = True
+        if not 15.0 <= t <= 35.0:
+            self.get_logger().warn(f'Température hors plage: &#123;t:.1f&#125;°C')
+            valid = False
+        if not 30.0 <= h <= 70.0:
+            self.get_logger().warn(f'Humidité hors plage: &#123;h:.1f&#125;%')
+            valid = False
+        if not 950.0 <= p <= 1050.0:
+            self.get_logger().warn(f'Pression hors plage: &#123;p:.1f&#125;hPa')
+            valid = False
+        if valid:
+            self.get_logger().info('Toutes les valeurs sont dans la plage.')
+
+def main():
+    rclpy.init()
+    node = SubscriberNode()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()</code></pre> </div> </section> <!-- Launch file --> <section id="launch" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+6. Launch file
+</h2> <p class="text-gray-600 mb-4">
+Le fichier <code>launch/sensor_launch.py</code> permet de démarrer
+                simultanément les deux nœuds :
+</p> <pre class="bg-gray-800 text-white p-4 rounded"><code>from launch import LaunchDescription
+from launch_ros.actions import Node
+
+def generate_launch_description():
+    return LaunchDescription([
+        Node(
+            package='sensor_data_evaluation',
+            executable='publisher_node',
+            name='publisher_node'
+        ),
+        Node(
+            package='sensor_data_evaluation',
+            executable='subscriber_node',
+            name='subscriber_node'
+        )
+    ])</code></pre> </section> <!-- Exécution et résultats --> <section id="execution" class="p-8"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+7. Exécution et résultats
+</h2> <div class="bg-gray-50 rounded-lg p-6 mb-6"> <h3 class="font-semibold text-gray-900 mb-3">
+1. Sourcing et lancement
+</h3> <pre class="bg-gray-800 text-white p-4 rounded"><code>source /opt/ros/humble/setup.bash
+source ~/ros2_ws/install/setup.bash
+ros2 launch sensor_data_evaluation sensor_launch.py</code></pre> </div> <div class="bg-gray-50 rounded-lg p-6 mb-6"> <h3 class="font-semibold text-gray-900 mb-3">2. Résultats</h3> <p class="text-gray-600 mb-4">Nous observons en simultané :</p> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>
+Les logs <strong>INFO</strong> de <code>publisher_node</code> (publication des valeurs).
 </li> <li>
-TestDrone : Position 3D initiale,
-                                        mouvement avec coûts, limites
-                                        d’altitude, invalides.
-</li> <li>
-TestRobotChirurgical : Initialisation,
-                                        precision valide/invalide, move(),
-                                        perform_surgery() conditions variées.
-</li> </ul> </div> <div class="mb-6"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
-8.2 Résultats attendus
-</h3> <p class="text-gray-600">
-Tous les tests passent avec succès (statut «
-                                    OK »). Rapports de couverture et logs
-                                    disponibles dans le dossier `tests/logs/`.
-</p> <h2 class="text-l font-bold mb-4">
-Capture d’écran des résultats(tests
-                                    untitaires)
-</h2> <img src="https://i.ibb.co/PZ1Hcn0H/image.png" alt="Capture d’écran des résultats" class="rounded-lg shadow-md mx-auto mb-2" width="600"> <p class="text-sm text-gray-500 text-center">
-Source : Team epo
-</p> </div> </section> <!-- Programme principal de démonstration --> <section id="programme" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
-9. Programme principal de démonstration
-</h2> <p class="text-gray-600">
-Lancement manuel : `python3 robot.py`. Affiche
-                                successivement la démonstration du Robot de base
-                                (R2D2), du Drone (Sky-1), du Robot chirurgical
-                                (Medic-Bot), et l’exécution rapide des tests
-                                unitaires (unittest).
-</p> <h2 class="text-l font-bold mb-4">
-Capture d’écran des résultats(tests
-                                    untitaires)
-</h2> <img src="https://i.ibb.co/p6039nMw/image.png" alt="Capture d’écran des résultats" class="rounded-lg shadow-md mx-auto mb-2" width="600"> <p class="text-sm text-gray-500 text-center">
-Source : Team epo
-</p> </section> <!-- Annexes et liens --> <section id="annexes" class="p-8"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
-11. Annexes et liens
-</h2> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>
-Code source complet : <a href="https://drive.google.com/drive/folders/1UumzR3ZWmaTBvybAzxaKQvtIBRAddM6E?usp=drive_link" class="text-purple-500">Lien</a> </li> <li>
-Diagramme UML (PNG & source puml) :
-                                    section 4.
-</li> <li>
-Captures de tests et logs : section 8.2.
-</li> <li>
-Dépôt GitHub du projet : <a href="#" class="text-purple-500">Lien</a> </li> </ul> </section> </div> </div> </div> </div> </main>  <script type="module">document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll('a[href^="#"]').forEach(t=>{t.addEventListener("click",function(e){e.preventDefault();const n=document.querySelector(this.getAttribute("href"));n&&n.scrollIntoView({behavior:"smooth",block:"start"})})})});function a(){const i=document.querySelector("#search-input"),t=document.querySelector("#search-results");!i||!t||(i.addEventListener("input",function(e){const n=e.target.value.toLowerCase().trim();if(n.length<2){t.innerHTML="",t.classList.add("hidden");return}document.body.textContent.toLowerCase();const c=document.querySelectorAll("section[id], div[id]"),r=[];c.forEach(o=>{const s=o.textContent.toLowerCase();if(s.includes(n)){const d=o.querySelector("h1, h2, h3")?.textContent||"Section";r.push({title:d,id:o.id,snippet:s.substr(s.indexOf(n)-50,100)})}}),r.length>0?(t.innerHTML=r.map(o=>`
+Les logs <strong>INFO/WARN</strong> de <code>subscriber_node</code> (validation des valeurs).
+</li> </ul> <p>
+Afin de pouvoir observé les résultats facilement nous nous
+                  avons lancé le node_subscriber et le node_publisher dans 2
+                  terminaux différents
+</p> <b>Les résultats des tests en incluant des valeurs hors normes</b> <p>
+nous pouvons donc observé dans le terminal à droite les warns
+                  quand les valeurs sont hors plages
+</p> <div style="padding:56.25% 0 0 0;position:relative;"> <iframe src="https://player.vimeo.com/video/1093747552?h=0737ce5f85&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="test_plages_hors_normes"></iframe> </div><script type="module" src="/2025-Team-EPO-Docs/_astro/test2.astro_astro_type_script_index_0_lang.DRbxEomH.js"></script> <br> <b>Les résultats des test avec des valeurs dans les normes</b> <div style="padding:56.25% 0 0 0;position:relative;"> <iframe src="https://player.vimeo.com/video/1093747513?h=b019dde1ee&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="test_plages_bien_définies"></iframe> </div><script type="module" src="/2025-Team-EPO-Docs/_astro/test2.astro_astro_type_script_index_1_lang.DRbxEomH.js"></script> <br> </div> </section> <!-- Annexes et liens --> <section id="annexes" class="p-8"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+9. Annexes et liens
+</h2> <p class="text-gray-600 mb-4">
+• Dépôt GitHub complet : <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/tree/main/docs/informatique/test2/code/sensor_data_evaluation" class="text-ros-600 hover:underline">lien</a> </p> <p class="text-gray-600 mb-4">• Fichiers sources :</p> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li> <a class="text-ros-600 hover:underline">package.xml</a> </li> <li> <a class="text-ros-600 hover:underline">setup.py</a> </li> <li> <a class="text-ros-600 hover:underline">publisher_node.py</a> </li> <li> <a class="text-ros-600 hover:underline">subscriber_node.py</a> </li> <li> <a class="text-ros-600 hover:underline">sensor_launch.py</a> </li> </ul> <!-- <p class="text-gray-600 mb-4">• Images brutes :</p>
+              <ul class="list-disc pl-6 text-gray-600 mb-4"> --> </section> <p class="text-gray-600 mb-4">• Vidéo de démonstration :</p> <div style="padding:56.25% 0 0 0;position:relative;"> <iframe src="https://player.vimeo.com/video/1093997021?h=1beb47ca27&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="resultats"></iframe> </div><script type="module" src="/2025-Team-EPO-Docs/_astro/test2.astro_astro_type_script_index_2_lang.DRbxEomH.js"></script> </div> </div> </div> </div> </main>  <script type="module">document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll('a[href^="#"]').forEach(t=>{t.addEventListener("click",function(e){e.preventDefault();const n=document.querySelector(this.getAttribute("href"));n&&n.scrollIntoView({behavior:"smooth",block:"start"})})})});function a(){const i=document.querySelector("#search-input"),t=document.querySelector("#search-results");!i||!t||(i.addEventListener("input",function(e){const n=e.target.value.toLowerCase().trim();if(n.length<2){t.innerHTML="",t.classList.add("hidden");return}document.body.textContent.toLowerCase();const c=document.querySelectorAll("section[id], div[id]"),r=[];c.forEach(o=>{const s=o.textContent.toLowerCase();if(s.includes(n)){const d=o.querySelector("h1, h2, h3")?.textContent||"Section";r.push({title:d,id:o.id,snippet:s.substr(s.indexOf(n)-50,100)})}}),r.length>0?(t.innerHTML=r.map(o=>`
               <div class="p-3 hover:bg-gray-100 cursor-pointer border-b">
                 <a href="#${o.id}" class="block">
                   <div class="font-medium text-primary-600">${o.title}</div>
