@@ -1,9 +1,9 @@
 
-# 🧪 ROS2 Test 2 – Sensor Data Evaluation
+#  ROS2 Test 2 – Sensor Data Evaluation
 
 Ce projet est un exercice pratique pour découvrir les bases de ROS2 à travers la création d’un système Publisher/Subscriber.
 
-## 📦 Objectif du projet
+##  Objectif du projet
 
 Créer un package ROS2 en Python nommé `sensor_data_evaluation` qui :
 - Publie des données aléatoires de type `Float32` (entre 0.0 et 2.0) sur le topic `/sensor_data` toutes les 0.5 secondes.
@@ -12,7 +12,7 @@ Créer un package ROS2 en Python nommé `sensor_data_evaluation` qui :
 
 ---
 
-## 🧰 Prérequis
+##  Prérequis
 
 - ROS2 Humble installé
 - Workspace `ros2_ws` initialisé (`src/`, `build/`, `install/`)
@@ -20,7 +20,7 @@ Créer un package ROS2 en Python nommé `sensor_data_evaluation` qui :
 
 ---
 
-## 🏗️ Installation et compilation
+## 🏗 Installation et compilation
 
 ```bash
 cd ~/ros2_ws/src
@@ -31,10 +31,9 @@ colcon build --packages-select sensor_data_evaluation
 source install/setup.bash
 ```
 
-📁 Arborescence du projet
-text
-Copy
-Edit
+ Arborescence du projet
+
+```
 sensor_data_evaluation/
 ├── launch/
 │   └── sensor_data_launch.py
@@ -45,6 +44,8 @@ sensor_data_evaluation/
 ├── package.xml
 ├── setup.py
 🚀 Lancement
+
+```
 ```bash
 
 ros2 launch sensor_data_evaluation sensor_data_launch.py
