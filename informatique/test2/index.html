@@ -5,134 +5,212 @@
             <p class="text-xs text-gray-500">Documentation Technique</p>
           </div> --> </div> </div> <!-- Navigation --> <nav class="hidden md:flex items-center space-x-8"> <a href="/2025-Team-EPO-Docs/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-50">
 Accueil
-</a> <a href="/2025-Team-EPO-Docs/electronique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-electronics-600 bg-yellow-50">
+</a> <a href="/2025-Team-EPO-Docs/electronique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-electronics-600 hover:bg-gray-50">
 Électronique
-</a> <a href="/2025-Team-EPO-Docs/informatique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-informatics-600 hover:bg-gray-50">
+</a> <a href="/2025-Team-EPO-Docs/informatique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-informatics-600 bg-blue-50">
 Informatique
 </a> <a href="/2025-Team-EPO-Docs/mecanique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-mechanics-600 hover:bg-gray-50">
 Mécanique
 </a> <a href="/2025-Team-EPO-Docs/test-final/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-testing-600 hover:bg-gray-50">
 Test Final
-</a> <a href="https://github.com/prohack001" target="_blank" class="text-gray-700 hover:text-gray-900 transition-colors" aria-label="Voir sur GitHub"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">...</svg> </a> </nav> <!-- Mobile menu button --> <div class="md:hidden"> <button type="button" class="text-gray-700 hover:text-gray-900 focus:outline-none focus:text-gray-900" id="mobile-menu-button"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile menu --> <div class="md:hidden hidden" id="mobile-menu"> <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200"> <a href="/2025-Team-EPO-Docs/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">Accueil</a> <a href="/2025-Team-EPO-Docs/electronique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-electronics-600 hover:bg-gray-50 rounded-md">Électronique</a> <a href="/2025-Team-EPO-Docs/informatique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-informatics-600 hover:bg-gray-50 rounded-md">Informatique</a> <a href="/2025-Team-EPO-Docs/mecanique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-mechanics-600 hover:bg-gray-50 rounded-md">Mécanique</a> <a href="/2025-Team-EPO-Docs/test-final/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-testing-600 hover:bg-gray-50 rounded-md">Test Final</a> </div> </div> </div> </header> <script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("mobile-menu-button"),n=document.getElementById("mobile-menu");e&&n&&e.addEventListener("click",function(){n.classList.toggle("hidden")})});</script> <main class="min-h-screen bg-gray-50"> <!-- Page Header --> <section class="bg-gradient-to-r from-electronics-500 to-teal-600 text-white py-16"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex items-center space-x-4 mb-6"> <div class="w-16 h-16 bg-white bg-opacity-20 rounded-lg flex items-center justify-center text-3xl">
-📦
-</div> <div> <h1 class="text-4xl md:text-5xl font-bold">Test 2 Électronique - Boîte Noire</h1> <p class="text-xl opacity-90 mt-2">Documentation Technique Complète</p> </div> </div> <div class="bg-white bg-opacity-10 rounded-lg p-4 inline-block"> <span class="text-sm font-medium">Progression: Complété</span> </div> </div> </section> <!-- Content --> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"> <div class="flex flex-col lg:flex-row gap-8"> <!-- Sidebar TOC --> <aside class="lg:w-64 flex-shrink-0"> <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 sticky top-20"> <h2 class="text-lg font-semibold text-gray-900 mb-4">Table des Matières</h2> <nav class="space-y-2"> <a href="#introduction" class="block text-sm text-gray-600 hover:text-electronics-600 transition-colors py-1">1. Contexte et introduction</a> <a href="#objectifs" class="block text-sm text-gray-600 hover:text-electronics-600 transition-colors py-1">2. Objectifs détaillés</a> <a href="#materiel" class="block text-sm text-gray-600 hover:text-electronics-600 transition-colors py-1">3. Matériel et choix des composants</a> <a href="#cahier" class="block text-sm text-gray-600 hover:text-electronics-600 transition-colors py-1">4. Cahier des charges et architecture électrique</a> <a href="#conception" class="block text-sm text-gray-600 hover:text-electronics-600 transition-colors py-1">5. Conception des schémas sous KiCad</a> <a href="#programmation" class="block text-sm text-gray-600 hover:text-electronics-600 transition-colors py-1">6. Processus de programmation</a> <a href="#code" class="block text-sm text-gray-600 hover:text-electronics-600 transition-colors py-1">7. Structure du code source</a> <a href="#prototypage" class="block text-sm text-gray-600 hover:text-electronics-600 transition-colors py-1">8. Prototypage sur veroboard</a> <a href="#mecanique" class="block text-sm text-gray-600 hover:text-electronics-600 transition-colors py-1">9. Conception mécanique sous FreeCAD</a> <a href="#tests" class="block text-sm text-gray-600 hover:text-electronics-600 transition-colors py-1">10. Tests, validation et résultats</a> <a href="#deploiement" class="block text-sm text-gray-600 hover:text-electronics-600 transition-colors py-1">11. Déploiement et mode d’emploi</a> <a href="#gestion" class="block text-sm text-gray-600 hover:text-electronics-600 transition-colors py-1">12. Gestion de projet et dépôt GitHub</a> <a href="#annexe" class="block text-sm text-gray-600 hover:text-electronics-600 transition-colors py-1">13. Annexe – Ressources et fichiers</a> <a href="#downloads" class="block text-sm text-gray-600 hover:text-electronics-600 transition-colors py-1">Téléchargements</a> </nav> </div> </aside> <!-- Main Content --> <div class="flex-1"> <div class="bg-white rounded-lg shadow-sm border border-gray-200"> <!-- Introduction --> <section id="introduction" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Contexte et introduction</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2">1.1. Contexte</h3> <p class="text-gray-600 mb-4">
-Dans le cadre de la présélection Tekbot Robotics Challenge 2025, le Test 2 vise à concevoir et réaliser une « boîte noire » autonome (cube de 70 mm d’arête) capable d’enregistrer et de transmettre en temps réel ses données de mouvement (accélérations et vitesses angulaires).
+</a> <a href="https://github.com/prohack001" target="_blank" class="text-gray-700 hover:text-gray-900 transition-colors" aria-label="Voir sur GitHub"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">...</svg> </a> </nav> <!-- Mobile menu button --> <div class="md:hidden"> <button type="button" class="text-gray-700 hover:text-gray-900 focus:outline-none focus:text-gray-900" id="mobile-menu-button"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile menu --> <div class="md:hidden hidden" id="mobile-menu"> <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200"> <a href="/2025-Team-EPO-Docs/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">Accueil</a> <a href="/2025-Team-EPO-Docs/electronique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-electronics-600 hover:bg-gray-50 rounded-md">Électronique</a> <a href="/2025-Team-EPO-Docs/informatique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-informatics-600 hover:bg-gray-50 rounded-md">Informatique</a> <a href="/2025-Team-EPO-Docs/mecanique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-mechanics-600 hover:bg-gray-50 rounded-md">Mécanique</a> <a href="/2025-Team-EPO-Docs/test-final/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-testing-600 hover:bg-gray-50 rounded-md">Test Final</a> </div> </div> </div> </header> <script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("mobile-menu-button"),n=document.getElementById("mobile-menu");e&&n&&e.addEventListener("click",function(){n.classList.toggle("hidden")})});</script> <main class="min-h-screen bg-gray-50"> <!-- Page Header --> <section class="bg-gradient-to-r from-green-500 to-teal-600 text-white py-16"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex items-center space-x-4 mb-6"> <div class="w-16 h-16 bg-white bg-opacity-20 rounded-lg flex items-center justify-center text-3xl">
+🤖
+</div> <div> <h1 class="text-4xl md:text-5xl font-bold">
+Test Informatique 2 – ROS2
+</h1> <p class="text-xl opacity-90 mt-2">
+Conception d'un package ROS2 pour l'évaluation des données de
+              capteurs
+</p> </div> </div> <!-- <div class="bg-white bg-opacity-10 rounded-lg p-4 inline-block">
+          <span class="text-sm font-medium">Progression: Complété</span>
+        </div> --> </div> </section> <!-- Content --> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"> <div class="flex flex-col lg:flex-row gap-8"> <!-- Sidebar TOC --> <aside class="lg:w-64 flex-shrink-0"> <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 sticky top-20"> <h2 class="text-lg font-semibold text-gray-900 mb-4">
+Table des Matières
+</h2> <nav class="space-y-2"> <a href="#introduction" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">1. Introduction</a> <a href="#objectifs" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">2. Objectifs</a> <a href="#pre-requis" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">3. Prérequis</a> <a href="#structure" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">4. Structure du Projet</a> <a href="#description" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">5. Description des nœuds</a> <a href="#launch" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">6. Launch file</a> <a href="#execution" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">7. Exécution et résultats</a> <a href="#annexes" class="block text-sm text-gray-600 hover:text-ros-600 transition-colors py-1">8. Annexes et liens</a> </nav> </div> </aside> <!-- Main Content --> <div class="flex-1"> <div class="bg-white rounded-lg shadow-sm border border-gray-200"> <!-- Introduction --> <section id="introduction" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+1. Introduction
+</h2> <p class="text-gray-600 mb-4">
+Nous présentons ici notre travail pour le deuxième test
+                informatique, centré sur ROS2.
 </p> <p class="text-gray-600 mb-4">
-Ces données sont émises en I2C vers une station de contrôle externe, puis affichées sur un écran LCD.
-</p> <h3 class="text-xl font-semibold text-gray-800 mb-2">1.2. Périmètre</h3> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>Conception électronique complète (schémas, PCB virtuels sous KiCad, prototypage sur veroboard)</li> <li>Programmation de deux ATmega328P nus (master dans le cube, slave dans la station)</li> <li>Modélisation mécanique du cube sous FreeCAD</li> <li>Tests fonctionnels et validation en conditions réelles</li> </ul> </section> <!-- Objectifs --> <section id="objectifs" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Objectifs détaillés</h2> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>Réaliser deux cartes électroniques (cube + station) avec ATmega328P, MPU-6050 et LCD 16×2.</li> <li>Mettre en place un bus I2C multi-esclaves :
-<ul class="list-disc pl-6 text-gray-600 mb-4"> <li>Maître = ATmega328P dans le cube</li> <li>Esclaves = MPU-6050 (adresse 0x68) et ATmega328P station (adresse 0x42)</li> </ul> </li> <li>Programmer les microcontrôleurs sans carte Arduino finale, uniquement avec Arduino UNO en tant que programmateur ISP.</li> <li>Respecter les bonnes pratiques de routage (largeur de piste ≥ 0,5 mm, espacement ≥ 0,3 mm, plan de masse continu).</li> <li>Prototyper sur veroboard tout en garantissant fiabilité et maintenabilité.</li> <li>Modéliser le boîtier cube paramétrique dans FreeCAD, inclure surface amovible.</li> <li>Démontrer la robustesse de la communication et la précision des mesures.</li> </ul> </section> <!-- Matériel --> <section id="materiel" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Matériel et choix des composants</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2">3.1. Microcontrôleurs</h3> <p class="text-gray-600 mb-4">
-ATmega328P-PU DIP-28 – Fréquence 16 MHz, 2 kB SRAM, /ArduinoIDE –  pulsation P = 16 MHz
-</p> <div> <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/ATMEGA328P-PU.jpg" alt="Extrusion 2" class="rounded-lg"> </div> <h3 class="text-xl font-semibold text-gray-800 mb-2">3.2. Capteur </h3> <p class="text-gray-600 mb-4">
-MPU-6050 (6 axes, I²C) – Adresse sélectionnable par broche AD0 – Plage accéléromètre ±2 g à ±16 g, gyroscope ±250 à ±2000 °/s – Datasheet InvenSense
-</p> <div> <img src="https://www.gotronic.fr/media/cache/sylius_shop_product_original/media/images-arobases/product/31492.jpg" alt="Extrusion 2" class="rounded-lg"> </div> <h3 class="text-xl font-semibold text-gray-800 mb-2">3.3. Afficheur</h3> <p class="text-gray-600 mb-4">
-LCD HD44780 compatible 16×2 (mode 4 bits) – Connecteurs DB4–DB7 + RS, E + R/W à la masse
-</p> <h3 class="text-xl font-semibold text-gray-800 mb-2">3.4. Alimentation</h3> <p class="text-gray-600 mb-4">
-Régulateur 7805 + condensateurs 10 µF / 100 nF – Filtrage EMI/CNI – Jack DC 2,1 mm + borniers 2 broches
-<img src="https://i.ibb.co/dsFzfjX2/Whats-App-Image-2025-06-12-at-09-17-45.jpg" alt="Whats-App-Image-2025-06-12-at-09-17-45" class="rounded-lg shadow-md mx-auto mb-2" width="200"> </p> <h3 class="text-xl font-semibold text-gray-800 mb-2">3.5. Passifs et connectique</h3> <p class="text-gray-600 mb-4">
-Pull-up I²C : 4,7 kΩ – Quartz 16 MHz + 2×22 pF – Supports DIP28, borniers dupont, fils émaillés, gaine thermorétractable
-</p> </section> <!-- Cahier des charges --> <section id="cahier" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Cahier des charges et architecture électrique</h2> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>Le maître initie la lecture du MPU-6050 à 10 Hz (régénération périodique).</li> <li>Lecture registre PWR_MGMT_1, configuration ACCEL_FS_SEL=0 (±2 g), GYRO_FS_SEL=0.</li> <li>Envoi des 6 valeurs 16 bits (AX, AY, AZ, GX, GY, GZ) sur bus I²C à l’esclave station.</li> <li>La station réceptionne octet par octet via TWI ISR, reconstruit les trames, puis met à jour l’écran LCD.</li> </ul>
-ci dessous un schéma que nous avons illustrer sous fritzing afin de voir l'architecture et le cablage
-<div> <img src="https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/main/docs/electronique/test2/images/fritzing.png" alt="Esquisse" class="rounded-lg"> <p class="text-sm text-gray-500 mt-2">schema de montage -Source: <a class="text-blue-500 hover:underline">Dépôt TEAM EPO</a></p> </div> </section> <!-- Conception des schémas --> <section id="conception" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Conception des schémas sous KiCad</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2">5.1. Organisation du projet</h3> <p class="text-gray-600 mb-4">
-Deux sous-dossiers : /Cube_Master/ et /Station_Slave/ – Fichiers : Cube_Master.sch, Cube_Master.kicad_pcb, Station_Slave.sch, …
-</p> <h3 class="text-xl font-semibold text-gray-800 mb-2">5.2. Feuille de schéma</h3> <div class="grid grid-cols-2 gap-4 mt-4"> <div> <img src="https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/main/docs/electronique/test2/images/circuit_esclave.png" alt="Esquisse" class="rounded-lg"> <p class="text-sm text-gray-500 mt-2">circuit_esclave-Source: <a class="text-blue-500 hover:underline">Dépôt TEAM EPO</a></p> </div> <div> <img src="https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/main/docs/electronique/test2/images/circuit_maitre.png" alt="Bossage" class="rounded-lg"> <p class="text-sm text-gray-500 mt-2">circuit_maitre-Source: <a class="text-blue-500 hover:underline">Dépôt TEAM EPO</a></p> </div> <div> <img src="https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/main/docs/electronique/test2/images/pcb_esclave.png" alt="Extrusion 1" class="rounded-lg"> <p class="text-sm text-gray-500 mt-2">pcb_esclaveSource: <a class="text-blue-500 hover:underline">Dépôt TEAM EPO</a></p> </div> <div> <img src="https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/main/docs/electronique/test2/images/pcb_maitre.png" alt="Extrusion 2" class="rounded-lg"> <p class="text-sm text-gray-500 mt-2">pcb_maitre-Source: <a class="text-blue-500 hover:underline">Dépôt TEAM EPO</a></p> </div> <div> <img src="https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/main/docs/electronique/test2/images/maitre.gif" alt="Extrusion 2" class="rounded-lg"> <p class="text-sm text-gray-500 mt-2">pcb_maitre-Source: <a class="text-blue-500 hover:underline">Dépôt TEAM EPO</a></p> </div> <div> <img src="https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/main/docs/electronique/test2/images/esclave.gif" alt="Extrusion 1" class="rounded-lg"> <p class="text-sm text-gray-500 mt-2">pcb_esclaveSource: <a class="text-blue-500 hover:underline">Dépôt TEAM EPO</a></p> </div> </div> <h3 class="text-xl font-semibold text-gray-800 mb-2">5.3. Liste de matériaux</h3>
-Télécharger ici le <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/tree/main/docs/electronique/test2/Bom">BOM</a> <h3 class="text-xl font-semibold text-gray-800 mb-2">5.4. Routage PCB</h3> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>Largeur de piste minimum : 0,5 mm (courant ≤ 300 mA)</li> <li>Espacement : 0,3 mm</li> <li>Plan de masse continu, via de découplage près de chaque régulateur</li> <li>Footprints conformes au boîtier réel (DIP28, 78xx TO-220, borniers)</li> </ul> </section> <!-- Programmation --> <section id="programmation" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Processus de programmation des ATmega328P via ArduinoISP</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2">6.1. Préparation de l’Arduino UNO</h3> <p class="text-gray-600 mb-4">
-Charger le sketch ArduinoISP (IDE → Exemples → 11.ArduinoISP). Empêcher le DTR de réinitialiser la carte UNO : soudure d’un 10 µF entre RESET et GND.
-</p> <h3 class="text-xl font-semibold text-gray-800 mb-2">6.2. Câblage ISP (6 broches)</h3> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>UNO D10 → RESET ATmega</li> <li>UNO D11 (MOSI) → PB3</li> <li>UNO D12 (MISO) → PB4</li> <li>UNO D13 (SCK) → PB5</li> <li>5 V → VCC, GND → GND</li> </ul> <h3 class="text-xl font-semibold text-gray-800 mb-2">6.3. Téléversement du firmware</h3> <p class="text-gray-600 mb-4">
-Sélection « ATmega328 on a breadboard » dans l’IDE Arduino. Menu : Outils→Programmer → Upload Using Programmer
-</p> </section> <!-- Code Source --> <section id="code" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Structure du code source</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2">7.1. Arborescence</h3> <pre class="bg-gray-800 text-white p-4 rounded">/Cube_Master/
-├─ Cube_Master.ino  (boucle maître, gestion du capteur et communication I2C)
-/Station_Slave/
-├─ Station_Slave.ino  (réception I2C et gestion de l'affichage LCD)
-  </pre> <h3 class="text-xl font-semibold text-gray-800 mb-2">7.2. Explications du code</h3> <h4 class="text-lg font-semibold text-gray-700 mb-2">Cube_Master.ino</h4> <p class="text-gray-600 mb-4">
-Ce fichier contient le code pour le microcontrôleur maître situé dans le cube. Il est responsable de la lecture des données du capteur MPU-6050 et de l'envoi de ces données à la station esclave via le bus I2C.
-</p> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li><strong>Initialisation</strong> : Configuration du bus I2C et du capteur MPU-6050.
-<pre class="bg-gray-100 p-4 rounded">&#123;#include &#60;Wire.h&#62;
-&#123;#include &#60;MPU6050.h&#62;
-MPU6050 mpu;
-void setup() &#123;
-  Wire.begin(); // Initialise le bus I2C en tant que maître
-  Serial.begin(9600); // Initialise la communication série pour le débogage
-  mpu.initialize(); // Initialise le capteur MPU-6050
-&#125;
-      </pre> </li> <li><strong>Lecture des données</strong> : Lecture des valeurs brutes de l'accéléromètre et du gyroscope, puis conversion en unités SI.
-<pre class="bg-gray-100 p-4 rounded">void loop() &#123;
-  int16_t ax, ay, az, gx, gy, gz;
-  mpu.getMotion6(&#38;ax, &#38;ay, &#38;az, &#38;gx, &#38;gy, &#38;gz);
-  float ax_ms2 = ax / 16384.0 * 9.81; // Conversion en m/s²
-  float ay_ms2 = ay / 16384.0 * 9.81;
-  float az_ms2 = az / 16384.0 * 9.81;
-  // ... (autres conversions)
-&#125;
-      </pre> </li> <li><strong>Envoi des données</strong> : Transmission des données traitées à la station esclave via I2C.
-<pre class="bg-gray-100 p-4 rounded">void envoyerTexte(const String&#38; txt) &#123;
-  Wire.beginTransmission(0x08); // Début de la transmission à l'adresse 0x08
-  for (int i = 0; i &#60; txt.length(); i++) &#123;
-    Wire.write(txt[i]); // Envoie chaque caractère
-  &#125;
-  Wire.endTransmission(); // Fin de la transmission
-&#125;
-      </pre> </li> </ul> <p class="text-gray-600 mb-4"> <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/blob/main/docs/electronique/test2/code/boite_noire_maitre.ino" class="text-blue-500 hover:underline">Voir le code complet sur GitHub</a> </p> <h4 class="text-lg font-semibold text-gray-700 mb-2">Station_Slave.ino</h4> <p class="text-gray-600 mb-4">
-Ce fichier contient le code pour le microcontrôleur esclave situé dans la station. Il reçoit les données du maître via I2C et les affiche sur un écran LCD.
-</p> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li><strong>Initialisation</strong> : Configuration du LCD et de l'adresse I2C de l'esclave.
-<pre class="bg-gray-100 p-4 rounded">&#123;#include &#60;Wire.h&#62;
-&#123;#include &#60;LiquidCrystal.h&#62;
-LiquidCrystal lcd(7, 6, 5, 4, 3, 2); // Initialise le LCD avec les broches utilisées
-void setup() &#123;
-  lcd.begin(16, 2); // Initialise le LCD 16x2
-  Wire.begin(0x08); // Initialise l'adresse I2C de l'esclave
-  Wire.onReceive(recevoirDonnees); // Définit la fonction de réception
-&#125;
-      </pre> </li> <li><strong>Réception des données</strong> : Réception des données I2C et mise à jour de l'affichage LCD.
-<pre class="bg-gray-100 p-4 rounded">void recevoirDonnees(int nbOctets) &#123;
-  String message = "";
-  while (Wire.available()) &#123;
-    message += char(Wire.read()); // Lit les données reçues
-  &#125;
-  // Met à jour l'affichage LCD
-  lcd.clear();
-  if (message.length() &#60;= 16) &#123;
-    lcd.print(message);
-  &#125; else &#123;
-    lcd.print(message.substring(0, 16));
-    lcd.setCursor(0, 1);
-    lcd.print(message.substring(16, 32));
-  &#125;
-&#125;
-      </pre> </li> </ul> <p class="text-gray-600 mb-4"> <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/blob/main/docs/electronique/test2/code/boite_noire_esclave.ino" class="text-blue-500 hover:underline">Voir le code complet sur GitHub</a> </p> <h3 class="text-xl font-semibold text-gray-800 mb-2">7.3. Stylage et optimisation</h3> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>Utilisation de chaînes de caractères pour la transmission des données.</li> <li>Utilisation de délais pour contrôler le taux de rafraîchissement des données.</li> <li>Conversion des données brutes en unités SI pour une meilleure lisibilité.</li> </ul> </section> <!-- Prototypage --> <section id="prototypage" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Prototypage sur veroboard</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2">8.1. Implantation</h3> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>Découpe de la plaquette à dimension 70×70 mm interne</li> <li>Positionnement de U1, régulateur, connecteurs selon schéma mécanique</li> <li>Tracés manuels des liaisons SDA/SCL avec gaine thermorétractable</li> </ul> <h3 class="text-xl font-semibold text-gray-800 mb-2">8.2. Astuces de câblage</h3> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>Séparer les pistes de signal haute fréquence des masses</li> <li>Ajouter des straps de masse rapprochés des broches VCC/GND</li> <li>Coller un petit PCB sur la face interne avec adhésif silicone pour rigidité</li> </ul> </section> <!-- Conception mécanique --> <section id="mecanique" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Conception mécanique sous FreeCAD</h2> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>Création d’un Part Design Body « Cube »</li> <li>Sketch 2D : carré 70×70 mm, épaisseur paroi 2 mm</li> <li>Extrusion : 70 mm, placement d’une rainure de 1 mm pour face coulissante</li> <li>Génération d’une face supérieure clip-on, insertion d’un loquet</li> <li>Export STL pour impression, rendu 3D pour documentation</li> </ul> <div> <img src="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/tree/main/docs/electronique/test2/images/piece.png" alt=""> </div> </section> <!-- Tests --> <section id="tests" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Tests, validation et résultats</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2">10.1. Photos</h3> <div class="grid grid-cols-2 gap-4 mt-4"> <div> <img src="https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/main/docs/electronique/test2/images/4.jpeg" alt="Esquisse" class="rounded-lg"> <p class="text-sm text-gray-500 mt-2">circuit_esclave-Source: <a class="text-blue-500 hover:underline">Dépôt TEAM EPO</a></p> </div> <div> <img src="https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/main/docs/electronique/test2/images/1.jpeg" alt="Bossage" class="rounded-lg"> </div> <div> <img src="https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/main/docs/electronique/test2/images/2.jpeg" alt="Extrusion 1" class="rounded-lg"> </div> <div> <img src="https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/main/docs/electronique/test2/images/5.jpeg" alt="Extrusion 2" class="rounded-lg"> </div> </div> <h3 class="text-xl font-semibold text-gray-800 mb-2">10.2. Résultats</h3> <iframe src="https://player.vimeo.com/video/1094738826?h=bb58130992&badge=0&autopause=0&player_id=0&app_id=58479" width="800" height="400" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" title="WhatsApp Vidéo 2025-06-19 à 13.53.59_d8b97e97"></iframe> <h3 class="text-xl font-semibold text-gray-800 mb-2">10.4. Analyse des écarts</h3> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>Calibration de l’accéléromètre à affiner par offset logiciel (erreur systématique < 2 %).</li> <li>Délai I2C mesuré 110 ms (lecture 6×2 octets + overhead)</li> </ul> </section> <!-- Déploiement --> <!-- <section id="deploiement" class="p-8 border-b border-gray-200">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">11. Déploiement et mode d’emploi</h2>
-              <ul class="list-disc pl-6 text-gray-600 mb-4">
-                <li>Alimentation : jack 7–12 V DC ou USB → 7805 interne → +5 V</li>
-                <li>Mise sous tension : le maître démarre la mesure, la station affiche « Init… » puis données</li>
-                <li>Séquence d’arrêt : aucune procédure spéciale, simplement couper l’alimentation</li>
-              </ul>
-            </section> --> <!-- Gestion de projet --> <!-- <section id="gestion" class="p-8 border-b border-gray-200">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">12. Gestion de projet et dépôt GitHub</h2>
-              <ul class="list-disc pl-6 text-gray-600 mb-4">
-                <li>URL : <a href="https://github.com/EquipeXYZ/Tekbot_TRC25_Test2" class="text-blue-500 hover:underline">https://github.com/EquipeXYZ/Tekbot_TRC25_Test2</a></li>
-                <li>README.md détaillant :
-                  <ul class="list-disc pl-6 text-gray-600 mb-4">
-                    <li>But du projet, matériel requis, instructions de compilation, schémas</li>
-                    <li>Arborescence, scripts de build (Makefile pour avr-gcc + avrdude)</li>
-                  </ul>
-                </li>
-                <li>Suivi :
-                  <ul class="list-disc pl-6 text-gray-600 mb-4">
-                    <li>Commits journaliers (message clair, tags v0.1, v1.0)</li>
-                    <li>Issues et Milestones pour chaque livrable (schéma, code, tests)</li>
-                  </ul>
-                </li>
-                <li>Fichiers inclus :
-                  <ul class="list-disc pl-6 text-gray-600 mb-4">
-                    <li>/KiCad/ (schémas .sch et .kicad_pcb)</li>
-                    <li>/FreeCAD/ (FCStd)</li>
-                    <li>/Veroboard/ (plans SVG)</li>
-                    <li>/Tests/ (rapport pdf, tableaux de mesure)</li>
-                  </ul>
-                </li>
-              </ul>
-            </section> --> <!-- Annexe --> <section id="annexe" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">13. Annexe – Ressources et fichiers</h2> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>Archives KiCad zippées</li> <li>Modèle FreeCAD et exports STL</li> <li>Vidéos démonstration (MP4 HD) et photos des prototypes</li> <div style="padding:56.6% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1094738808?h=2bcdc0744a&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="WhatsApp Vidéo 2025-06-19 à 13.50.03_3a46892d"></iframe></div><script type="module" src="/2025-Team-EPO-Docs/_astro/test2.astro_astro_type_script_index_0_lang.DRbxEomH.js"></script> <li>Code source complet </li> </ul> </section> <!-- Téléchargements --> <section id="downloads" class="p-8"> <h2 class="text-2xl font-bold text-gray-900 mb-4">Téléchargements</h2> <p class="text-gray-600 mb-4">
-Vous pouvez télécharger les fichiers des pièces, les schémas, le code source, et le rapport détaillé en PDF ci-dessous :
-</p> <div class="space-y-4"> <div class="bg-gray-50 rounded-lg p-4"> <h3 class="font-semibold text-gray-900 mb-2">Pièces et Schémas</h3> <ul class="list-disc pl-6 text-gray-600"> <li> <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/tree/main/docs/electronique/test2/Kicad" class="text-blue-500 hover:underline">fichier du schéma du Cube Master</a> </li> <li> <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/tree/main/docs/electronique/test2/Kicad" class="text-blue-500 hover:underline">fichier du schéma de la Station Slave</a> </li> </ul> </div> <div class="bg-gray-50 rounded-lg p-4"> <h3 class="font-semibold text-gray-900 mb-2">Code Source</h3> <ul class="list-disc pl-6 text-gray-600"> <li> <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/blob/main/docs/electronique/test2/code/" class="text-blue-500 hover:underline">Télécharger le code source complet</a> </li> </ul> </div> </div> </section> </div> </div> </div> </div> </main>  <script type="module">document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll('a[href^="#"]').forEach(t=>{t.addEventListener("click",function(e){e.preventDefault();const n=document.querySelector(this.getAttribute("href"));n&&n.scrollIntoView({behavior:"smooth",block:"start"})})})});function a(){const i=document.querySelector("#search-input"),t=document.querySelector("#search-results");!i||!t||(i.addEventListener("input",function(e){const n=e.target.value.toLowerCase().trim();if(n.length<2){t.innerHTML="",t.classList.add("hidden");return}document.body.textContent.toLowerCase();const c=document.querySelectorAll("section[id], div[id]"),r=[];c.forEach(o=>{const s=o.textContent.toLowerCase();if(s.includes(n)){const d=o.querySelector("h1, h2, h3")?.textContent||"Section";r.push({title:d,id:o.id,snippet:s.substr(s.indexOf(n)-50,100)})}}),r.length>0?(t.innerHTML=r.map(o=>`
+Nous avons pour mission de concevoir un package ROS2 nommé <strong>sensor_data_evaluation</strong>, comprenant deux nœuds Python :
+</p> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li> <strong>publisher_node</strong> : génère toutes les 0,5 s des mesures
+                  aléatoires de température, humidité et pression.
+</li> <li> <strong>subscriber_node</strong> : reçoit ces données, vérifie
+                  qu’elles sont dans des plages sûres et logue un message adapté.
+</li> </ul> <p class="text-gray-600 mb-4">
+Ce travail nous permet de maîtriser la publication/souscription
+                de messages, la configuration de QoS, et l’écriture d’un launch
+                file pour démarrer simultanément plusieurs nœuds.
+</p> </section> <!-- Objectifs --> <section id="objectifs" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+2. Objectifs
+</h2> <p class="text-gray-600 mb-4">Nous visons à :</p> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>
+Mettre en place un workflow ROS2 complet (structure de
+                  package, <code>setup.py</code>, <code>package.xml</code>).
+</li> <li>
+Implémenter un publisher à fréquence fixe (2 Hz) avec <code>std_msgs/Float32MultiArray</code>.
+</li> <li>
+Implémenter un subscriber capable de détecter et signaler les
+                  valeurs hors plage.
+</li> <li>
+Créer un launch file Python afin de démarrer automatiquement
+                  nos deux nœuds.
+</li> <li>
+Valider visuellement le bon fonctionnement grâce à des
+                  captures d’écran et une vidéo de démonstration.
+</li> </ul> </section> <!-- Prérequis --> <section id="pre-requis" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+3. Prérequis
+</h2> <p class="text-gray-600 mb-4">Nous utilisons :</p> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>Ubuntu 22.04</li> <li>ROS2 Humble</li> <li>Python 3.8+</li> <li>Outils : git, colcon</li> </ul> </section> <!-- Structure du Projet --> <section id="structure" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+4. Structure du Projet
+</h2> <pre class="bg-gray-800 text-white p-4 rounded">                <code>
+sensor_data_evaluation/
+ • resource/sensor_data_evaluation
+ • sensor_data_evaluation/
+   – __init__.py
+   – publisher_node.py
+   – subscriber_node.py
+ • launch/
+   – sensor_launch.py
+ • package.xml
+ • setup.py
+ • README.md</code></pre> <br> <b class="text-gray-600 mb-4">
+• Dépôt GitHub complet : <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/tree/main/docs/informatique/test2/code/sensor_data_evaluation" class="text-ros-600 hover:underline">lien</a> </b> </section> <!-- Description des nœuds --> <section id="description" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+5. Description des nœuds
+</h2> <div class="bg-gray-50 rounded-lg p-6 mb-6"> <h3 class="font-semibold text-gray-900 mb-3">
+5.1 publisher_node.py
+</h3> <p class="text-gray-600 mb-4">
+Nous publions un message <code>Float</code> sur <code>/sensor_data</code> :
+</p> <pre class="bg-gray-800 text-white p-4 rounded">                  <code>
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import Float32MultiArray
+import random
+
+class PublisherNode(Node):
+    def __init__(self):
+        # Initialisation du nœud avec le nom 'publisher_node'
+        super().&#95;&#95;init&#95;&#95;('publisher_node')
+
+         
+        <p class="text-green-500">
+        """
+        Création d'un éditeur (publisher) qui envoie 
+        des messages de type Float32MultiArray
+        sur le topic '/sensor_data' avec une taille de file d'attente de 10
+        """
+         </p>
+        self.pub = self.create_publisher(Float32MultiArray, '/sensor_data', 10)
+
+        <p class="text-green-500">    # Création d'un timer qui appelle la méthode publish_data toutes les 0.5 secondes
+        self.create_timer(0.5, self.publish_data)</p>        
+
+    def publish_data(self):
+        # Création d'un message de type Float32MultiArray
+        msg = Float32MultiArray()
+
+        # Remplissage du message avec des données aléatoires simulées
+        msg.data = [
+            random.uniform(15.0, 35.0),  # Température aléatoire 
+            random.uniform(30.0, 70.0),  # Humidité aléatoire 
+            random.uniform(950.0, 1050.0)  # Pression aléatoire 
+        ]
+
+        # Publication du message
+        self.pub.publish(msg)
+
+        # Affichage des données publiées dans le log
+        self.get_logger().info(
+            f'Publié → T:&#123;msg.data[0]:.1f&#125;°C H:&#123;
+            msg.data[1]:.1f&#125;% P:&#123;msg.data[2]:.1f&#125;hPa'
+        )
+
+def main():
+    # Initialisation de ROS 2
+    rclpy.init()
+
+    # Création d'une instance de PublisherNode
+    node = PublisherNode()
+
+    # Lancement du nœud et attente des signaux d'arrêt
+    rclpy.spin(node)
+
+    # Nettoyage : destruction du nœud et arrêt de ROS 2
+    node.destroy_node()
+    rclpy.shutdown()</code>
+
+  </pre> </div> <div class="bg-gray-50 rounded-lg p-6 mb-6"> <h3 class="font-semibold text-gray-900 mb-3">
+5.2 subscriber_node.py
+</h3> <p class="text-gray-600 mb-4">
+Nous recevons les données et validons chaque valeur :
+</p> <pre class="bg-gray-800 text-white p-4 rounded"><code>import rclpy
+from rclpy.node import Node
+from std_msgs.msg import Float32MultiArray
+
+class SubscriberNode(Node):
+    def __init__(self):
+        super().__init__('subscriber_node')
+        self.create_subscription(
+            Float32MultiArray, '/sensor_data', self.callback, 10)
+
+    def callback(self, msg):
+        t, h, p = msg.data
+        valid = True
+        if not 15.0 <= t <= 35.0:
+            self.get_logger().warn(f'Température hors plage: &#123;t:.1f&#125;°C')
+            valid = False
+        if not 30.0 <= h <= 70.0:
+            self.get_logger().warn(f'Humidité hors plage: &#123;h:.1f&#125;%')
+            valid = False
+        if not 950.0 <= p <= 1050.0:
+            self.get_logger().warn(f'Pression hors plage: &#123;p:.1f&#125;hPa')
+            valid = False
+        if valid:
+            self.get_logger().info('Toutes les valeurs sont dans la plage.')
+
+def main():
+    rclpy.init()
+    node = SubscriberNode()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()</code></pre> </div> </section> <!-- Launch file --> <section id="launch" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+6. Launch file
+</h2> <p class="text-gray-600 mb-4">
+Le fichier <code>launch/sensor_launch.py</code> permet de démarrer
+                simultanément les deux nœuds :
+</p> <pre class="bg-gray-800 text-white p-4 rounded"><code>from launch import LaunchDescription
+from launch_ros.actions import Node
+
+def generate_launch_description():
+    return LaunchDescription([
+        Node(
+            package='sensor_data_evaluation',
+            executable='publisher_node',
+            name='publisher_node'
+        ),
+        Node(
+            package='sensor_data_evaluation',
+            executable='subscriber_node',
+            name='subscriber_node'
+        )
+    ])</code></pre> </section> <!-- Exécution et résultats --> <section id="execution" class="p-8"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+7. Exécution et résultats
+</h2> <div class="bg-gray-50 rounded-lg p-6 mb-6"> <h3 class="font-semibold text-gray-900 mb-3">
+1. Sourcing et lancement
+</h3> <pre class="bg-gray-800 text-white p-4 rounded"><code>source /opt/ros/humble/setup.bash
+source ~/ros2_ws/install/setup.bash
+ros2 launch sensor_data_evaluation sensor_launch.py</code></pre> </div> <div class="bg-gray-50 rounded-lg p-6 mb-6"> <h3 class="font-semibold text-gray-900 mb-3">2. Résultats</h3> <p class="text-gray-600 mb-4">Nous observons en simultané :</p> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li>
+Les logs <strong>INFO</strong> de <code>publisher_node</code> (publication des valeurs).
+</li> <li>
+Les logs <strong>INFO/WARN</strong> de <code>subscriber_node</code> (validation des valeurs).
+</li> </ul> <p>
+Afin de pouvoir observé les résultats facilement nous nous
+                  avons lancé le node_subscriber et le node_publisher dans 2
+                  terminaux différents
+</p> <b>Les résultats des tests en incluant des valeurs hors normes</b> <p>
+nous pouvons donc observé dans le terminal à droite les warns
+                  quand les valeurs sont hors plages
+</p> <div style="padding:56.25% 0 0 0;position:relative;"> <iframe src="https://player.vimeo.com/video/1093747552?h=0737ce5f85&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="test_plages_hors_normes"></iframe> </div><script type="module" src="/2025-Team-EPO-Docs/_astro/test2.astro_astro_type_script_index_0_lang.EHQRc0aL.js"></script> <br> <b>Les résultats des test avec des valeurs dans les normes</b> <div style="padding:56.25% 0 0 0;position:relative;"> <iframe src="https://player.vimeo.com/video/1093747513?h=b019dde1ee&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="test_plages_bien_définies"></iframe> </div><script type="module" src="/2025-Team-EPO-Docs/_astro/test2.astro_astro_type_script_index_1_lang.DRbxEomH.js"></script> <br> <b>Les resultats du sensor data launch </b> <div> <img src="https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/main/docs/informatique/test2/images/launch.png" alt="Esquisse" class="rounded-lg"> <p class="text-sm text-gray-500 mt-2">Resultat fichier launch: <a class="text-blue-500 hover:underline">Dépôt TEAM EPO</a></p> </div> </div></section> <!-- Annexes et liens --> <section id="annexes" class="p-8"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+9. Annexes et liens
+</h2> <p class="text-gray-600 mb-4">
+• Dépôt GitHub complet : <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/tree/main/docs/informatique/test2/code/sensor_data_evaluation" class="text-ros-600 hover:underline">lien</a> </p> <p class="text-gray-600 mb-4">• Fichiers sources :</p> <ul class="list-disc pl-6 text-gray-600 mb-4"> <li> <a class="text-ros-600 hover:underline">package.xml</a> </li> <li> <a class="text-ros-600 hover:underline">setup.py</a> </li> <li> <a class="text-ros-600 hover:underline">publisher_node.py</a> </li> <li> <a class="text-ros-600 hover:underline">subscriber_node.py</a> </li> <li> <a class="text-ros-600 hover:underline">sensor_launch.py</a> </li> </ul> <!-- <p class="text-gray-600 mb-4">• Images brutes :</p>
+              <ul class="list-disc pl-6 text-gray-600 mb-4"> --> <p class="text-gray-600 mb-4">• Vidéo de démonstration :</p> <div style="padding:56.25% 0 0 0;position:relative;"> <iframe src="https://player.vimeo.com/video/1093997021?h=1beb47ca27&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="resultats"></iframe> </div><script type="module" src="/2025-Team-EPO-Docs/_astro/test2.astro_astro_type_script_index_2_lang.DRbxEomH.js"></script> </section> </div> </div> </div> </div> </main>  <script type="module">document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll('a[href^="#"]').forEach(t=>{t.addEventListener("click",function(e){e.preventDefault();const n=document.querySelector(this.getAttribute("href"));n&&n.scrollIntoView({behavior:"smooth",block:"start"})})})});function a(){const i=document.querySelector("#search-input"),t=document.querySelector("#search-results");!i||!t||(i.addEventListener("input",function(e){const n=e.target.value.toLowerCase().trim();if(n.length<2){t.innerHTML="",t.classList.add("hidden");return}document.body.textContent.toLowerCase();const c=document.querySelectorAll("section[id], div[id]"),r=[];c.forEach(o=>{const s=o.textContent.toLowerCase();if(s.includes(n)){const d=o.querySelector("h1, h2, h3")?.textContent||"Section";r.push({title:d,id:o.id,snippet:s.substr(s.indexOf(n)-50,100)})}}),r.length>0?(t.innerHTML=r.map(o=>`
               <div class="p-3 hover:bg-gray-100 cursor-pointer border-b">
                 <a href="#${o.id}" class="block">
                   <div class="font-medium text-primary-600">${o.title}</div>
