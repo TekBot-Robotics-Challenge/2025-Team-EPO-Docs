@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="fr"> <head><meta charset="UTF-8"><meta name="description" content="Documentation technique complète pour le Tekbot Robotics Challenge 2025"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/2025-Team-EPO-Docsfavicon.svg"><meta name="generator" content="Astro v5.9.2"><title>Navigation Autonome d&#39;un Robot TekBot dans un Labyrinthe</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/2025-Team-EPO-Docs/_astro/index.mkCQKV18.css"></head> <body class="bg-gray-50 text-gray-900 font-sans">  <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <!-- Logo and title --> <div class="flex items-center space-x-4"> <div class="flex items-center space-x-2"> <!-- <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-lg">T</span>
+          </div> --> <img src="/2025-Team-EPO-Docs/Logo.svg" alt="Logo" class="h-100"> <!-- <div>
+            <h1 class="text-xl font-bold text-gray-900">TRC2K25</h1>
+            <p class="text-xs text-gray-500">Documentation Technique</p>
+          </div> --> </div> </div> <!-- Navigation --> <nav class="hidden md:flex items-center space-x-8"> <a href="/2025-Team-EPO-Docs/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-50">
+Accueil
+</a> <a href="/2025-Team-EPO-Docs/electronique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-electronics-600 hover:bg-gray-50">
+Électronique
+</a> <a href="/2025-Team-EPO-Docs/informatique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-informatics-600 bg-blue-50">
+Informatique
+</a> <a href="/2025-Team-EPO-Docs/mecanique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-mechanics-600 hover:bg-gray-50">
+Mécanique
+</a> <a href="/2025-Team-EPO-Docs/test-final/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-testing-600 hover:bg-gray-50">
+Test Final
+</a> <a href="https://github.com/prohack001" target="_blank" class="text-gray-700 hover:text-gray-900 transition-colors" aria-label="Voir sur GitHub"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">...</svg> </a> </nav> <!-- Mobile menu button --> <div class="md:hidden"> <button type="button" class="text-gray-700 hover:text-gray-900 focus:outline-none focus:text-gray-900" id="mobile-menu-button"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile menu --> <div class="md:hidden hidden" id="mobile-menu"> <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200"> <a href="/2025-Team-EPO-Docs/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">Accueil</a> <a href="/2025-Team-EPO-Docs/electronique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-electronics-600 hover:bg-gray-50 rounded-md">Électronique</a> <a href="/2025-Team-EPO-Docs/informatique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-informatics-600 hover:bg-gray-50 rounded-md">Informatique</a> <a href="/2025-Team-EPO-Docs/mecanique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-mechanics-600 hover:bg-gray-50 rounded-md">Mécanique</a> <a href="/2025-Team-EPO-Docs/test-final/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-testing-600 hover:bg-gray-50 rounded-md">Test Final</a> </div> </div> </div> </header> <script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("mobile-menu-button"),n=document.getElementById("mobile-menu");e&&n&&e.addEventListener("click",function(){n.classList.toggle("hidden")})});</script> <main class="min-h-screen bg-gray-50"> <!-- Page Header --> <section class="bg-gradient-to-r from-blue-500 to-teal-600 text-white py-16"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex items-center space-x-4 mb-6"> <div class="w-16 h-16 bg-white bg-opacity-20 rounded-lg flex items-center justify-center text-3xl">
+🤖
+</div> <div> <h1 class="text-4xl md:text-5xl font-bold">
+Navigation Autonome d'un Robot TekBot dans un Labyrinthe
+</h1> <p class="text-xl opacity-90 mt-2">
+Projet TRC2K25 - Test 3
+</p> </div> </div> </div> </section> <!-- Content --> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"> <div class="flex flex-col lg:flex-row gap-8"> <!-- Sidebar TOC --> <aside class="lg:w-64 flex-shrink-0"> <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 sticky top-20"> <h2 class="text-lg font-semibold text-gray-900 mb-4">Table des matières</h2> <nav class="space-y-2"> <a href="#introduction" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">1. Introduction</a> <a href="#objectifs" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">2. Objectifs</a> <a href="#materiel" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">3. Matériel et environnement logiciel</a> <a href="#installation" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">4. Installation et Configuration</a> <a href="#architecture" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">5. Architecture du système</a> <a href="#documentation" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">6. Documentation du Nœud A*</a> <a href="#visualisation" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">7. Commandes pour la Visualisation</a> <a href="#resultats" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">8. Résultats obtenus</a> <a href="#analyse" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">9. Analyse critique</a> <a href="#annexes" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">10. Annexes</a> </nav> </div> </aside> <!-- Main Content --> <div class="flex-1"> <div class="bg-white rounded-lg shadow-sm border border-gray-200"> <!-- Introduction --> <section id="introduction" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2> <p class="text-gray-600">
+Ce document présente l'implémentation complète d'un système de navigation autonome pour un robot TekBot évoluant dans un environnement labyrinthique simulé.
+</p> </section> <!-- Objectifs --> <section id="objectifs" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Objectifs</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2">2.1 Objectifs principaux</h3> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>Navigation autonome du robot TekBot dans un labyrinthe complexe.</li> <li>Implémentation de l'algorithme A* pour générer des trajectoires optimales.</li> <li>Évitement d'obstacles pour une navigation sécurisée.</li> </ul> </section> <!-- Matériel et environnement logiciel --> <section id="materiel" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Matériel et environnement logiciel</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2">3.1 Spécifications logicielles</h3> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>OS: Ubuntu 22.04 LTS</li> <li>ROS: ROS2 Humble Hawksbill</li> <li>Simulateur: Gazebo Classic</li> </ul> </section> <!-- Installation et Configuration --> <section id="installation" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Installation et Configuration</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2">4.1 Préparation de l'environnement</h3> <pre class="bg-gray-100 p-4 rounded"># Création du conteneur Ubuntu 22.04
+distrobox create --name ros2-humble --image ubuntu:22.04
+distrobox enter ros2-humble
+
+# Installation de ROS2 Humble
+sudo apt update
+sudo apt install ros-humble-desktop-full
+source /opt/ros/humble/setup.bash
+</pre> <h3 class="text-xl font-semibold text-gray-800 mb-2">4.2 Création de l'espace de travail et clonage du projet</h3> <pre class="bg-gray-100 p-4 rounded"># Création de l'espace de travail
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws
+colcon build
+source install/setup.bash
+
+# Clonage du dépôt
+git clone https://github.com/charif-tekbot/tekbot_sim.git
+</pre> <h3 class="text-xl font-semibold text-gray-800 mb-2">4.3 Création du package ROS2</h3> <pre class="bg-gray-100 p-4 rounded"># Création du package pathfinding_robot
+cd ~/ros2_ws/src
+ros2 pkg create --build-type ament_python pathfinding_robot
+</pre> <h3 class="text-xl font-semibold text-gray-800 mb-2">4.4 Exécution du nœud</h3> <pre class="bg-gray-100 p-4 rounded"># Exécution du nœud pathfinder_node
+ros2 run pathfinding_robot pathfinder_node
+</pre> </section> <!-- Architecture du système --> <section id="architecture" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Architecture du système</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2">5.1 Vue d'ensemble du système</h3> <p class="text-gray-600">
+Le système de navigation autonome est structuré autour de plusieurs nœuds ROS2 qui interagissent pour permettre au robot de naviguer dans le labyrinthe. Les principaux composants incluent :
+</p> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>Un nœud pour la publication de l'état du robot.</li> <li>Un nœud pour l'algorithme de pathfinding A*.</li> <li>Un nœud pour la publication des objectifs de navigation.</li> </ul> </section> <!-- Documentation du Nœud A* --> <section id="documentation" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Documentation du Nœud de Pathfinding A*</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2">6.1 Introduction</h3> <p class="text-gray-600">
+Ce document décrit l'implémentation d'un nœud ROS2 pour un robot utilisant l'algorithme de pathfinding A*. Le nœud, nommé <code>pathfinder_node</code>, permet au robot de naviguer de manière autonome dans un environnement en évitant les obstacles.
+</p> <h3 class="text-xl font-semibold text-gray-800 mb-2">6.2 Prérequis</h3> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>ROS2 (Humble Hawksbill)</li> <li>Python 3.8 ou supérieur</li> <li>Bibliothèques Python : <code>numpy</code>, <code>heapq</code></li> </ul> <h3 class="text-xl font-semibold text-gray-800 mb-2">6.3 Structure du Code</h3> <h4 class="text-lg font-semibold text-gray-700 mb-2">6.3.1 Importations</h4> <pre class="bg-gray-100 p-4 rounded">import rclpy
+from rclpy.node import Node
+from geometry_msgs.msg import Twist, PoseStamped
+from sensor_msgs.msg import LaserScan
+from nav_msgs.msg import OccupancyGrid, Path, Odometry
+import numpy as np
+import heapq
+import math
+import time
+</pre> <h4 class="text-lg font-semibold text-gray-700 mb-2">6.3.2 Classe <code>AStarPathfinder</code></h4> <p class="text-gray-600">
+La classe principale <code>AStarPathfinder</code> hérite de <code>Node</code> et représente le nœud ROS2 pour le pathfinding.
+</p> <h4 class="text-lg font-semibold text-gray-700 mb-2">6.3.3 Initialisation du Nœud</h4> <pre class="bg-gray-100 p-4 rounded">class AStarPathfinder(Node):
+    def __init__(self):
+        super().__init__('pathfinder_node')
+
+        # Publishers
+        self.cmd_pub = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.path_pub = self.create_publisher(Path, '/planned_path', 10)
+
+        # Subscribers
+        self.scan_sub = self.create_subscription(LaserScan, '/scan', self.scan_callback, 10)
+        self.odom_sub = self.create_subscription(Odometry, '/odom', self.odom_callback, 10)
+        self.goal_sub = self.create_subscription(PoseStamped, '/goal_pose', self.goal_callback, 10)
+
+        # Variables de position
+        self.robot_x = 0.0
+        self.robot_y = 0.0
+        self.robot_yaw = 0.0
+</pre> <h4 class="text-lg font-semibold text-gray-700 mb-2">6.3.4 Callbacks pour les Subscribers</h4> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li><code>scan_callback</code> : Gère les données du capteur laser.</li> <li><code>odom_callback</code> : Met à jour la position et l'orientation du robot.</li> <li><code>goal_callback</code> : Définit l'objectif de navigation pour le robot.</li> </ul> <h4 class="text-lg font-semibold text-gray-700 mb-2">6.3.5 Algorithme A*</h4> <p class="text-gray-600">
+La classe contient une implémentation de l'algorithme A* pour le pathfinding, avec des méthodes pour calculer le chemin optimal.
+</p> <h4 class="text-lg font-semibold text-gray-700 mb-2">6.3.6 Publication des Commandes de Mouvement</h4> <p class="text-gray-600">
+Le nœud publie des commandes de mouvement pour le robot en utilisant le publisher <code>cmd_pub</code>.
+</p> <h4 class="text-lg font-semibold text-gray-700 mb-2">6.3.7 Publication du Chemin Planifié</h4> <p class="text-gray-600">
+Le chemin planifié est publié pour la visualisation dans RViz.
+</p> <h4 class="text-lg font-semibold text-gray-700 mb-2">6.3.8 Fonction <code>main</code></h4> <p class="text-gray-600">
+La fonction <code>main</code> initialise le nœud ROS2 et le fait tourner jusqu'à ce qu'il soit arrêté.
+</p> <pre class="bg-gray-100 p-4 rounded">def main(args=None):
+    rclpy.init(args=args)
+    pathfinder = AStarPathfinder()
+    rclpy.spin(pathfinder)
+    pathfinder.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+</pre> </section> <!-- Commandes pour la Visualisation --> <section id="visualisation" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Commandes pour la Visualisation</h2> <p class="text-gray-600">
+Pour visualiser et exécuter le système de navigation autonome, vous devez ouvrir plusieurs terminaux et exécuter les commandes suivantes :
+</p> <h3 class="text-xl font-semibold text-gray-800 mb-2">7.1 Terminal 1 : Lancement de ROS2</h3> <pre class="bg-gray-100 p-4 rounded"># Source l'espace de travail ROS2
+source /opt/ros/humble/setup.bash
+source ~/ros2_ws/install/setup.bash
+
+# Lancement du nœud principal
+ros2 run pathfinding_robot pathfinder_node
+  </pre> <h3 class="text-xl font-semibold text-gray-800 mb-2">7.2 Terminal 2 : Lancement de Gazebo</h3> <pre class="bg-gray-100 p-4 rounded"># Source l'espace de travail ROS2
+source /opt/ros/humble/setup.bash
+source ~/ros2_ws/install/setup.bash
+
+# Lancement de Gazebo avec le labyrinthe
+ros2 launch maze_solving tekbot_maze.launch.py
+  </pre> <h3 class="text-xl font-semibold text-gray-800 mb-2">7.3 Terminal 3 : Lancement de RViz</h3> <pre class="bg-gray-100 p-4 rounded"># Source l'espace de travail ROS2
+source /opt/ros/humble/setup.bash
+source ~/ros2_ws/install/setup.bash
+
+# Lancement de RViz2
+rviz2
+  </pre> <h3 class="text-xl font-semibold text-gray-800 mb-2">7.4 Terminal 4 : Publication d'un objectif</h3> <pre class="bg-gray-100 p-4 rounded"># Source l'espace de travail ROS2
+source /opt/ros/humble/setup.bash
+source ~/ros2_ws/install/setup.bash
+
+# Publication d'un objectif pour le robot
+ros2 topic pub --once /goal_pose geometry_msgs/msg/PoseStamped 
+'&#123;header: &#123;frame_id: "odom"&#125;, pose: &#123;position: 
+&#123;x: 2.5, y: 2.5, z: 0.0&#125;, orientation: &#123;
+x: 0.0, y: 0.0, z: 0.0, w: 1.0&#125;&#125;&#125;'
+  </pre> </section> <!-- Résultats obtenus --> <section id="resultats" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Résultats obtenus</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2">8.1 Environnement de test Gazebo</h3> <p class="text-gray-600">
+L'environnement de test dans Gazebo est un labyrinthe de 10m x 10m avec des murs et des passages étroits. Le robot TekBot a été testé dans cet environnement pour évaluer ses capacités de navigation autonome.
+</p> <h3 class="text-xl font-semibold text-gray-800 mb-2">8.2 Vidéo de démonstration</h3> <div style="padding:56.25% 0 0 0;position:relative;"> <iframe src="https://player.vimeo.com/video/1096553503?h=7da355a686&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="2025-06-26 10-18-30"></iframe> </div> <script type="module" src="/2025-Team-EPO-Docs/_astro/test3.astro_astro_type_script_index_0_lang.EHQRc0aL.js"></script> </section> <!-- Analyse critique --> <section id="analyse" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Analyse critique</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2">9.1 Forces du système</h3> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>Robustesse : Le système a réussi à gérer la plupart des scénarios de test sans intervention humaine.</li> <li>Visualisation complète : L'intégration RViz2 a fourni une interface de monitoring intuitive.</li> </ul> <h3 class="text-xl font-semibold text-gray-800 mb-2">9.2 Limites et axes d'amélioration</h3> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>Gestion des impasses : La détection des impasses pourrait être améliorée avec une exploration plus systématique.</li> <li>Optimisation énergétique : Aucune optimisation spécifique de la consommation énergétique n'a été implémentée.</li> </ul> </section> <!-- Annexes --> <section id="annexes" class="p-8"> <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Annexes</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2">10.1 Liens vers les ressources</h3> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>Code source complet : <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/raw/refs/heads/main/docs/informatique/test3/code/pathfinding_robot.zip" class="text-blue-500">Lien</a></li> <li>Documentation complémentaire : <a href="https://github.com/charif-tekbot/tekbot_sim.git" class="text-blue-500">Lien</a></li> </ul> </section> </div></div></div></div></main> <script type="module">document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll('a[href^="#"]').forEach(t=>{t.addEventListener("click",function(e){e.preventDefault();const n=document.querySelector(this.getAttribute("href"));n&&n.scrollIntoView({behavior:"smooth",block:"start"})})})});function a(){const i=document.querySelector("#search-input"),t=document.querySelector("#search-results");!i||!t||(i.addEventListener("input",function(e){const n=e.target.value.toLowerCase().trim();if(n.length<2){t.innerHTML="",t.classList.add("hidden");return}document.body.textContent.toLowerCase();const c=document.querySelectorAll("section[id], div[id]"),r=[];c.forEach(o=>{const s=o.textContent.toLowerCase();if(s.includes(n)){const d=o.querySelector("h1, h2, h3")?.textContent||"Section";r.push({title:d,id:o.id,snippet:s.substr(s.indexOf(n)-50,100)})}}),r.length>0?(t.innerHTML=r.map(o=>`
+              <div class="p-3 hover:bg-gray-100 cursor-pointer border-b">
+                <a href="#${o.id}" class="block">
+                  <div class="font-medium text-primary-600">${o.title}</div>
+                  <div class="text-sm text-gray-600 truncate">${o.snippet}</div>
+                </a>
+              </div>
+            `).join(""),t.classList.remove("hidden")):(t.innerHTML='<div class="p-3 text-gray-500">Aucun résultat trouvé</div>',t.classList.remove("hidden"))}),document.addEventListener("click",function(e){!i.contains(e.target)&&!t.contains(e.target)&&t.classList.add("hidden")}))}function l(){document.querySelectorAll("pre code").forEach(t=>{const e=document.createElement("button");e.className="absolute top-2 right-2 px-2 py-1 bg-gray-700 text-white text-xs rounded hover:bg-gray-600 transition-colors",e.textContent="Copier";const n=t.parentElement;n.style.position="relative",n.appendChild(e),e.addEventListener("click",function(){navigator.clipboard.writeText(t.textContent).then(()=>{e.textContent="Copié !",setTimeout(()=>{e.textContent="Copier"},2e3)})})})}document.addEventListener("DOMContentLoaded",function(){a(),l()});</script> </body> </html>

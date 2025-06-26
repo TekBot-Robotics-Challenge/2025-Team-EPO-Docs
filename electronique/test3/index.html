@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="fr"> <head><meta charset="UTF-8"><meta name="description" content="Documentation technique complète pour le Tekbot Robotics Challenge 2025"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/2025-Team-EPO-Docsfavicon.svg"><meta name="generator" content="Astro v5.9.2"><title>Test 3 - Afficheur 7 segments mécanique</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/2025-Team-EPO-Docs/_astro/index.mkCQKV18.css"></head> <body class="bg-gray-50 text-gray-900 font-sans">  <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <!-- Logo and title --> <div class="flex items-center space-x-4"> <div class="flex items-center space-x-2"> <!-- <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-lg">T</span>
+          </div> --> <img src="/2025-Team-EPO-Docs/Logo.svg" alt="Logo" class="h-100"> <!-- <div>
+            <h1 class="text-xl font-bold text-gray-900">TRC2K25</h1>
+            <p class="text-xs text-gray-500">Documentation Technique</p>
+          </div> --> </div> </div> <!-- Navigation --> <nav class="hidden md:flex items-center space-x-8"> <a href="/2025-Team-EPO-Docs/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-50">
+Accueil
+</a> <a href="/2025-Team-EPO-Docs/electronique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-electronics-600 bg-yellow-50">
+Électronique
+</a> <a href="/2025-Team-EPO-Docs/informatique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-informatics-600 hover:bg-gray-50">
+Informatique
+</a> <a href="/2025-Team-EPO-Docs/mecanique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-mechanics-600 hover:bg-gray-50">
+Mécanique
+</a> <a href="/2025-Team-EPO-Docs/test-final/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-testing-600 hover:bg-gray-50">
+Test Final
+</a> <a href="https://github.com/prohack001" target="_blank" class="text-gray-700 hover:text-gray-900 transition-colors" aria-label="Voir sur GitHub"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">...</svg> </a> </nav> <!-- Mobile menu button --> <div class="md:hidden"> <button type="button" class="text-gray-700 hover:text-gray-900 focus:outline-none focus:text-gray-900" id="mobile-menu-button"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile menu --> <div class="md:hidden hidden" id="mobile-menu"> <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200"> <a href="/2025-Team-EPO-Docs/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">Accueil</a> <a href="/2025-Team-EPO-Docs/electronique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-electronics-600 hover:bg-gray-50 rounded-md">Électronique</a> <a href="/2025-Team-EPO-Docs/informatique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-informatics-600 hover:bg-gray-50 rounded-md">Informatique</a> <a href="/2025-Team-EPO-Docs/mecanique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-mechanics-600 hover:bg-gray-50 rounded-md">Mécanique</a> <a href="/2025-Team-EPO-Docs/test-final/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-testing-600 hover:bg-gray-50 rounded-md">Test Final</a> </div> </div> </div> </header> <script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("mobile-menu-button"),n=document.getElementById("mobile-menu");e&&n&&e.addEventListener("click",function(){n.classList.toggle("hidden")})});</script> <main class="min-h-screen bg-gray-50"> <!-- Page Header --> <section class="bg-gradient-to-r from-blue-500 to-teal-600 text-white py-16"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex items-center space-x-4 mb-6"> <div class="w-16 h-16 bg-white bg-opacity-20 rounded-lg flex items-center justify-center text-3xl">
+🤖
+</div> <div> <h1 class="text-4xl md:text-5xl font-bold">
+Test 3 - Afficheur 7 segments mécanique
+</h1> <p class="text-xl opacity-90 mt-2">
+Conception d'un afficheur 7 segments mécanique à
+                            l'aide de servomoteurs
+</p> </div> </div> </div> </section> <!-- Content --> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"> <div class="flex flex-col lg:flex-row gap-8"> <!-- Sidebar TOC --> <aside class="lg:w-64 flex-shrink-0"> <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 sticky top-20"> <h2 class="text-lg font-semibold text-gray-900 mb-4">
+Table des matières
+</h2> <nav class="space-y-2"> <a href="#introduction" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">1. Introduction</a> <a href="#objectifs" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">2. Objectifs du test</a> <a href="#materiel" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">3. Matériel et composants utilisés</a> <a href="#conception" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">4. Conception des schémas sous KiCad</a> <a href="#alimentation" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">5. Alimentation électrique</a> <a href="#cablage" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">6. Câblage et connectique</a> <a href="#code" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">7. Code Arduino</a> <a href="#realisation" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">8. Réalisation physique</a> <a href="#demo" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">9. Démonstrations</a> <a href="#conclusion" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">10. Conclusion</a> <a href="#annexes" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">11. Annexes</a> </nav> </div> </aside> <!-- Main Content --> <div class="flex-1"> <div class="bg-white rounded-lg shadow-sm border border-gray-200"> <!-- Introduction --> <section id="introduction" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+1. Introduction
+</h2> <p class="text-gray-600">
+Le test 3 consiste à concevoir un afficheur 7
+                                segments mécanique à l'aide de servomoteurs.
+                                Contrairement aux afficheurs traditionnels
+                                lumineux, ici chaque segment est manipulé
+                                mécaniquement par un servomoteur. L'objectif est
+                                de faire défiler les chiffres de 0 à 9 puis de 9
+                                à 0 avec un délai d'une seconde, sans utiliser
+                                de fonction bloquante.
+</p> </section> <!-- Objectifs --> <section id="objectifs" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+2. Objectifs du test
+</h2> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>
+Concevoir un afficheur 7 segments
+                                    fonctionnant uniquement à l'aide de
+                                    servomoteurs.
+</li> <li>
+Utiliser directement des microcontrôleurs
+                                    ATmega328P (sans carte Arduino).
+</li> <li>
+Concevoir et réaliser les schémas
+                                    électroniques sous KiCad.
+</li> <li>
+Piloter les 7 servomoteurs pour afficher les
+                                    chiffres de 0 à 9 puis de 9 à 0.
+</li> <li>
+Utiliser des batteries lithium pour
+                                    alimenter le circuit.
+</li> <li>
+Éviter les fonctions bloquantes dans le code
+                                    (pas de delay()).
+</li> <li>
+Présenter une démonstration vidéo du
+                                    fonctionnement.
+</li> <li>
+Documenter chaque étape sur GitHub Pages.
+</li> </ul> </section> <!-- Matériel --> <section id="materiel" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+3. Matériel et composants utilisés
+</h2> <div class="mb-4"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
+3.1. Microcontrôleurs
+</h3> <p class="text-gray-600">
+ATmega328P-PU DIP-28, Fréquence 16 MHz, 2Kb
+                                    SRAM, /ArduinoIDE, pulsation P=16 MHz
+</p> <img src="https://www.wellpcb.com/wp-content/uploads/2022/03/1-26-1200x800.jpg" alt="ATmega328P" class="rounded-lg shadow-md mx-auto mb-2" width="400"> </div> <div class="mb-4"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
+3.2. Servomoteurs SG90
+</h3> <img src="https://th.bing.com/th/id/OIP.y5TyX9WFVDk51jpaEl1FyAHaHa?rs=1&pid=ImgDetMain" alt="Servomoteurs SG90" class="rounded-lg shadow-md mx-auto mb-2" width="400"> </div> <div class="mb-4"> <h3 class="text-xl font-semibold text-gray-800 mb-2">
+3.3. Batteries au lithium
+</h3> <img src="https://images.dutscher.com/reference/hd/067510.webp" alt="Batteries au lithium" class="rounded-lg shadow-md mx-auto mb-2" width="400"> </div> </section> <!-- Conception des schémas sous KiCad --> <section id="conception" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+4. Conception des schémas sous KiCad
+</h2> <p class="text-gray-600">
+Note importante : En raison de l'indisponibilité
+                                du module PCA9685 initialement prévu pour le
+                                contrôle des 7 servomoteurs via I2C, nous avons
+                                conçu une solution alternative reposant sur deux
+                                microcontrôleurs ATmega328P. L'un agit en tant
+                                que maître (gère les segments a, b, c, d), et
+                                l'autre en tant qu'esclave (gère les segments e,
+                                f, g). La communication entre eux est assurée
+                                via le protocole I2C.
+</p> <img src="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/raw/main/docs/electronique/test3/images/schema.png" alt="Schéma électronique" class="rounded-lg shadow-md mx-auto mb-2" width="600"> <p class="text-sm text-gray-500 text-center">
+Source : Team EPO - Schéma électronique
+</p> <img src="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/raw/main/docs/electronique/test3/images/pcb.png" alt="Vue du PCB" class="rounded-lg shadow-md mx-auto mb-2" width="600"> <p class="text-sm text-gray-500 text-center">
+Source : Team EPO - Vue du PCB
+</p> <img src="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/raw/main/docs/electronique/test3/images/3D.gif" alt="Vue 3D" class="rounded-lg shadow-md mx-auto mb-2" width="600"> <p class="text-sm text-gray-500 text-center">
+Source : Team EPO - Vue 3D
+</p> </section> <!-- Alimentation électrique --> <section id="alimentation" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+5. Alimentation électrique(meme circuit que les tests prédents)
+</h2> <p class="text-gray-600">
+Source : Batterie Li-ion 7.4V
+</p> <p class="text-gray-600">
+Distribution : ATmega Maître : alimenté par
+                                régulateur 5V, ATmega Esclave : également
+                                alimenté par 5V régulé, Servos : 5V régulé
+                                directement, Condensateurs de découplage
+                                utilisés aux bornes des microcontrôleurs et du
+                                régulateur pour stabiliser l'alimentation.
+</p> <div style="padding:56.25% 0 0 0;position:relative;"> <iframe src="https://player.vimeo.com/video/1096463237?h=15f92a78d1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="video avec pile lithium"></iframe> </div> <script type="module" src="/2025-Team-EPO-Docs/_astro/test3.astro_astro_type_script_index_0_lang.DRbxEomH.js"></script> </section> <!-- Câblage et connectique --> <section id="cablage" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+6. Câblage et connectique
+</h2> <table class="w-full border border-gray-200 rounded-lg overflow-hidden"> <thead class="bg-gray-50"> <tr> <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Élément</th> <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Broche</th> <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Connexion</th> </tr> </thead> <tbody class="divide-y divide-gray-200"> <tr> <td class="px-4 py-3 text-sm font-medium text-gray-900">ATmega Maître</td> <td class="px-4 py-3 text-sm text-gray-600">D3, D5, D6, D9</td> <td class="px-4 py-3 text-sm text-gray-600">Servos a, b, c, d</td> </tr> <tr class="bg-gray-50"> <td class="px-4 py-3 text-sm font-medium text-gray-900">ATmega Maître</td> <td class="px-4 py-3 text-sm text-gray-600">A4 (SDA), A5 (SCL)</td> <td class="px-4 py-3 text-sm text-gray-600">I2C vers ATmega Esclave</td> </tr> <tr> <td class="px-4 py-3 text-sm font-medium text-gray-900">ATmega Esclave</td> <td class="px-4 py-3 text-sm text-gray-600">D3, D5, D6</td> <td class="px-4 py-3 text-sm text-gray-600">Servos e, f, g</td> </tr> </tbody> </table> </section> <!-- Code Arduino --> <section id="code" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+7. Code Arduino
+</h2> <p class="text-gray-600">
+Le code Arduino est structuré en deux parties
+                                distinctes, maître et esclave. Le maître gère
+                                les segments a, b, c, d localement, et envoie
+                                via I2C les segments e, f, g à l'esclave, qui
+                                les affiche. Le système alterne les chiffres de
+                                0 à 9 puis de 9 à 0 toutes les secondes sans
+                                utiliser <code>delay()</code>.
+</p> <h3 class="text-xl font-semibold text-gray-800 mb-2">
+Code du microcontrôleur maître
+</h3> <pre class="bg-gray-800 text-white p-4 rounded overflow-auto text-sm leading-relaxed">&lt;code&gt;
+// === Code du microcontrôleur maître ===
+#include &amp;lt;Wire.h&amp;gt; // Bibliothèque pour communication I2C
+#include &amp;lt;Servo.h&amp;gt; // Bibliothèque pour contrôler les servomoteurs
+
+Servo servos[4]; // Tableau contenant 4 servos pour les segments a, b, c, d
+const int servoPins[4] = &#123;3, 5, 6, 9&#125;; // Broches des servos
+const int slaveAddress = 0x08; // Adresse I2C de l'esclave
+
+// Définition des chiffres de 0 à 9 sous forme de segments (a à g)
+const byte chiffres[10][7] = &#123;
+  &#123;1, 1, 1, 1, 1, 1, 0&#125;, // 0
+  &#123;0, 1, 1, 0, 0, 0, 0&#125;, // 1
+  &#123;1, 1, 0, 1, 1, 0, 1&#125;, // 2
+  &#123;1, 1, 1, 1, 0, 0, 1&#125;, // 3
+  &#123;0, 1, 1, 0, 0, 1, 1&#125;, // 4
+  &#123;1, 0, 1, 1, 0, 1, 1&#125;, // 5
+  &#123;1, 0, 1, 1, 1, 1, 1&#125;, // 6
+  &#123;1, 1, 1, 0, 0, 0, 0&#125;, // 7
+  &#123;1, 1, 1, 1, 1, 1, 1&#125;, // 8
+  &#123;1, 1, 1, 1, 0, 1, 1&#125;  // 9
+&#125;;
+
+int compteur = 0; // Indice du chiffre affiché
+bool croissant = true; // Direction de l'incrément
+unsigned long previousMillis = 0;
+const unsigned long interval = 1000; // 1 seconde
+
+void setup() &#123;
+  Wire.begin(); // Démarre I2C en maître
+  for (int i = 0; i &lt; 4; i++) servos[i].attach(servoPins[i]); // Attacher les servos
+&#125;
+
+void loop() &#123;
+  unsigned long currentMillis = millis();
+
+  if (currentMillis - previousMillis &gt;= interval) &#123;
+    previousMillis = currentMillis;
+
+    // Envoyer segments e, f, g à l'esclave
+    Wire.beginTransmission(slaveAddress);
+    Wire.write(chiffres[compteur][4]);
+    Wire.write(chiffres[compteur][5]);
+    Wire.write(chiffres[compteur][6]);
+    Wire.endTransmission();
+
+    // Affichage local des segments a, b, c, d
+    for (int i = 0; i &lt; 4; i++)
+      servos[i].write(chiffres[compteur][i] ? 0 : 90);
+
+    // Avancer ou reculer dans la séquence
+    if (croissant) &#123;
+      compteur++;
+      if (compteur == 9) croissant = false;
+    &#125; else &#123;
+      compteur--;
+      if (compteur == 0) croissant = true;
+    &#125;
+  &#125;
+&#125;
+&lt;/code&gt;</pre> <h3 class="text-xl font-semibold text-gray-800 mb-2">
+Code du microcontrôleur esclave
+</h3> <pre class="bg-gray-800 text-white p-4 rounded overflow-auto text-sm leading-relaxed">&lt;code&gt;
+// === Code du microcontrôleur esclave ===
+#include &amp;lt;Wire.h&amp;gt; // Communication I2C
+#include &amp;lt;Servo.h&amp;gt; // Contrôle des servomoteurs
+
+Servo servos[3]; // Servos pour segments e, f, g
+const int servoPins[3] = &#123;3, 5, 6&#125;; // Broches reliées aux servos
+byte segments[3] = &#123;0, 0, 0&#125;; // Données reçues
+byte lastSegments[3] = &#123;2, 2, 2&#125;; // Dernier état des segments
+
+void setup() &#123;
+  Wire.begin(0x08); // Démarrer I2C en esclave à l'adresse 0x08
+  Wire.onReceive(recevoirData); // Fonction appelée lors de la réception
+  for (int i = 0; i &lt; 3; i++) servos[i].attach(servoPins[i]); // Attacher les servos
+&#125;
+
+void loop() &#123;
+  // Mise à jour des servos si changement détecté
+  for (int i = 0; i &lt; 3; i++) &#123;
+    if (segments[i] != lastSegments[i]) &#123;
+      servos[i].write(segments[i] == 1 ? 0 : 90); // État du segment
+      lastSegments[i] = segments[i]; // Mémoriser l'état
+    &#125;
+  &#125;
+&#125;
+
+void recevoirData(int nbOctets) &#123;
+  // Lire les 3 valeurs I2C pour les segments e, f, g
+  for (int i = 0; i &lt; 3 &amp;&amp; Wire.available(); i++) &#123;
+    segments[i] = Wire.read(); // Stocker les données reçues
+  &#125;
+&#125;
+&lt;/code&gt;</pre> </section> <!-- Réalisation physique --> <section id="realisation" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+8. Réalisation physique
+</h2> <p class="text-gray-600">
+Utilisation de veroboard pour l'assemblage
+                                final.
+</p> <div style="padding:56.25% 0 0 0;position:relative;"> <iframe src="https://player.vimeo.com/video/1096462369?h=a66e149edb&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="video de vue"></iframe> </div> <script type="module" src="/2025-Team-EPO-Docs/_astro/test3.astro_astro_type_script_index_1_lang.DRbxEomH.js"></script> </section> <!-- Démonstrations --> <section id="demo" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+9. Démonstrations
+</h2> <p class="text-gray-600">
+Voici une démonstration du fonctionnement du
+                                système électronique avec un générateur DC dans le but d'observer les pics de courant et voir si y a une différence dans la fluidité des mouvements:
+</p> <div style="padding:56.25% 0 0 0;position:relative;"> <iframe src="https://player.vimeo.com/video/1096462078?h=3b43687e93&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="demo avec générateur DC"></iframe> </div> <script type="module" src="/2025-Team-EPO-Docs/_astro/test3.astro_astro_type_script_index_2_lang.DRbxEomH.js"></script> </section> <!-- Conclusion --> <section id="conclusion" class="p-8 border-b border-gray-200"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+10. Conclusion
+</h2> <p class="text-gray-600">
+Malgré l'absence du module PCA9685, une solution
+                                ingénieuse a été mise en œuvre avec deux
+                                ATmega328P. Le système a rempli les objectifs du
+                                test : affichage complet des chiffres,
+                                temporisation non bloquante, schéma électronique
+                                propre, et alimentation stable. Ce projet
+                                démontre notre capacité d'adaptation et
+                                d'innovation en électronique embarquée.
+</p> </section> <!-- Annexes --> <section id="annexes" class="p-8"> <h2 class="text-2xl font-bold text-gray-900 mb-4">
+11. Annexes
+</h2> <ul class="list-disc pl-5 space-y-2 text-gray-600"> <li>
+KiCAD : projet complet (schémas + 3D) : <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/tree/main/docs/electronique/test3/Kicad/7SEG" class="text-blue-500">Lien</a> </li> <li>
+Code Arduino Maître : <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/blob/main/docs/electronique/test3/code/master.ino" class="text-blue-500">Lien</a> </li> <li>
+Code Arduino Esclave : <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/blob/main/docs/electronique/test3/code/eslave.ino" class="text-blue-500">Lien</a> </li> </ul> </section> </div> </div> </div> </div> </main>  <script type="module">document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll('a[href^="#"]').forEach(t=>{t.addEventListener("click",function(e){e.preventDefault();const n=document.querySelector(this.getAttribute("href"));n&&n.scrollIntoView({behavior:"smooth",block:"start"})})})});function a(){const i=document.querySelector("#search-input"),t=document.querySelector("#search-results");!i||!t||(i.addEventListener("input",function(e){const n=e.target.value.toLowerCase().trim();if(n.length<2){t.innerHTML="",t.classList.add("hidden");return}document.body.textContent.toLowerCase();const c=document.querySelectorAll("section[id], div[id]"),r=[];c.forEach(o=>{const s=o.textContent.toLowerCase();if(s.includes(n)){const d=o.querySelector("h1, h2, h3")?.textContent||"Section";r.push({title:d,id:o.id,snippet:s.substr(s.indexOf(n)-50,100)})}}),r.length>0?(t.innerHTML=r.map(o=>`
+              <div class="p-3 hover:bg-gray-100 cursor-pointer border-b">
+                <a href="#${o.id}" class="block">
+                  <div class="font-medium text-primary-600">${o.title}</div>
+                  <div class="text-sm text-gray-600 truncate">${o.snippet}</div>
+                </a>
+              </div>
+            `).join(""),t.classList.remove("hidden")):(t.innerHTML='<div class="p-3 text-gray-500">Aucun résultat trouvé</div>',t.classList.remove("hidden"))}),document.addEventListener("click",function(e){!i.contains(e.target)&&!t.contains(e.target)&&t.classList.add("hidden")}))}function l(){document.querySelectorAll("pre code").forEach(t=>{const e=document.createElement("button");e.className="absolute top-2 right-2 px-2 py-1 bg-gray-700 text-white text-xs rounded hover:bg-gray-600 transition-colors",e.textContent="Copier";const n=t.parentElement;n.style.position="relative",n.appendChild(e),e.addEventListener("click",function(){navigator.clipboard.writeText(t.textContent).then(()=>{e.textContent="Copié !",setTimeout(()=>{e.textContent="Copier"},2e3)})})})}document.addEventListener("DOMContentLoaded",function(){a(),l()});</script> </body> </html>
