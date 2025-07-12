@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="fr"> <head><meta charset="UTF-8"><meta name="description" content="Documentation technique complète pour le Tekbot Robotics Challenge 2025"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/2025-Team-EPO-Docsfavicon.svg"><meta name="generator" content="Astro v5.9.2"><title>Plateforme Web Convoyeur Intelligent de Tri</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/2025-Team-EPO-Docs/_astro/final.DGZQTK3o.css">
+<style>.modal[data-astro-cid-eklq3gtr]{display:none;position:fixed;z-index:1000;padding-top:100px;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:#000000e6}.modal-content[data-astro-cid-eklq3gtr]{margin:auto;display:block;width:80%;max-width:700px}.close[data-astro-cid-eklq3gtr]{position:absolute;top:15px;right:35px;color:#f1f1f1;font-size:40px;font-weight:700;transition:.3s}.close[data-astro-cid-eklq3gtr]:hover{color:#bbb;text-decoration:none;cursor:pointer}
+</style></head> <body class="bg-gray-50 text-gray-900 font-sans">  <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex justify-between items-center h-16"> <!-- Logo and title --> <div class="flex items-center space-x-4"> <div class="flex items-center space-x-2"> <!-- <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-lg">T</span>
+          </div> --> <img src="/2025-Team-EPO-Docs/Logo.svg" alt="Logo" class="h-100"> <!-- <div>
+            <h1 class="text-xl font-bold text-gray-900">TRC2K25</h1>
+            <p class="text-xs text-gray-500">Documentation Technique</p>
+          </div> --> </div> </div> <!-- Navigation --> <nav class="hidden md:flex items-center space-x-8"> <a href="/2025-Team-EPO-Docs/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-50">
+Accueil
+</a> <a href="/2025-Team-EPO-Docs/electronique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-electronics-600 hover:bg-gray-50">
+Électronique
+</a> <a href="/2025-Team-EPO-Docs/informatique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-informatics-600 bg-blue-50">
+Informatique
+</a> <a href="/2025-Team-EPO-Docs/mecanique/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-mechanics-600 hover:bg-gray-50">
+Mécanique
+</a> <a href="/2025-Team-EPO-Docs/test-final/" class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-gray-700 hover:text-testing-600 hover:bg-gray-50">
+Test Final
+</a> <a href="https://github.com/prohack001" target="_blank" class="text-gray-700 hover:text-gray-900 transition-colors" aria-label="Voir sur GitHub"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">...</svg> </a> </nav> <!-- Mobile menu button --> <div class="md:hidden"> <button type="button" class="text-gray-700 hover:text-gray-900 focus:outline-none focus:text-gray-900" id="mobile-menu-button"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <!-- Mobile menu --> <div class="md:hidden hidden" id="mobile-menu"> <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200"> <a href="/2025-Team-EPO-Docs/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md">Accueil</a> <a href="/2025-Team-EPO-Docs/electronique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-electronics-600 hover:bg-gray-50 rounded-md">Électronique</a> <a href="/2025-Team-EPO-Docs/informatique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-informatics-600 hover:bg-gray-50 rounded-md">Informatique</a> <a href="/2025-Team-EPO-Docs/mecanique/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-mechanics-600 hover:bg-gray-50 rounded-md">Mécanique</a> <a href="/2025-Team-EPO-Docs/test-final/" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-testing-600 hover:bg-gray-50 rounded-md">Test Final</a> </div> </div> </div> </header> <script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("mobile-menu-button"),n=document.getElementById("mobile-menu");e&&n&&e.addEventListener("click",function(){n.classList.toggle("hidden")})});</script> <main class="min-h-screen bg-gray-50" data-astro-cid-eklq3gtr> <!-- Page Header --> <section class="bg-gradient-to-r from-blue-500 to-teal-600 text-white py-16" data-astro-cid-eklq3gtr> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-astro-cid-eklq3gtr> <div class="flex items-center space-x-4 mb-6" data-astro-cid-eklq3gtr> <div class="w-16 h-16 bg-white bg-opacity-20 rounded-lg flex items-center justify-center text-3xl" data-astro-cid-eklq3gtr>
+♻️
+</div> <div data-astro-cid-eklq3gtr> <h1 class="text-4xl md:text-5xl font-bold" data-astro-cid-eklq3gtr>Plateforme Web Convoyeur Intelligent de Tri</h1> <p class="text-xl opacity-90 mt-2" data-astro-cid-eklq3gtr>Projet TEKBOT TRC 2025</p> </div> </div> </div> </section> <!-- Content --> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" data-astro-cid-eklq3gtr> <div class="flex flex-col lg:flex-row gap-8" data-astro-cid-eklq3gtr> <!-- Sidebar TOC --> <aside class="lg:w-64 flex-shrink-0" data-astro-cid-eklq3gtr> <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 sticky top-20" data-astro-cid-eklq3gtr> <h2 class="text-lg font-semibold text-gray-900 mb-4" data-astro-cid-eklq3gtr>Table des matières</h2> <nav class="space-y-2" data-astro-cid-eklq3gtr> <a href="#introduction" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1" data-astro-cid-eklq3gtr>1. Introduction</a> <a href="#contexte-et-objectifs" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1" data-astro-cid-eklq3gtr>2. Contexte et Objectifs</a> <a href="#analyse-des-besoins" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1" data-astro-cid-eklq3gtr>3. Analyse des Besoins</a> <a href="#choix-technologiques" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1" data-astro-cid-eklq3gtr>4. Choix Technologiques</a> <a href="#architecture-systeme" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1" data-astro-cid-eklq3gtr>5. Architecture Système</a> <a href="#conception-et-design" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1" data-astro-cid-eklq3gtr>6. Conception et Design</a> <a href="#developpement-et-implementation" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1" data-astro-cid-eklq3gtr>7. Développement et Implémentation</a> <a href="#tests-et-validation" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1" data-astro-cid-eklq3gtr>8. Tests et Validation</a> <a href="#resultats-et-performance" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1" data-astro-cid-eklq3gtr>9. Résultats et Performance</a> <!-- <a href="#deploiement-et-maintenance" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1">10. Déploiement et Maintenance</a> --> <a href="#perspectives-devolution" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1" data-astro-cid-eklq3gtr>11. Perspectives d'Évolution</a> <a href="#conclusion" class="block text-sm text-gray-600 hover:text-blue-600 transition-colors py-1" data-astro-cid-eklq3gtr>12. Conclusion</a> </nav> </div> </aside> <!-- Main Content --> <div class="flex-1" data-astro-cid-eklq3gtr> <div class="bg-white rounded-lg shadow-sm border border-gray-200" data-astro-cid-eklq3gtr> <!-- Introduction --> <section id="introduction" class="p-8 border-b border-gray-200" data-astro-cid-eklq3gtr> <h2 class="text-2xl font-bold text-gray-900 mb-4" data-astro-cid-eklq3gtr>1. Introduction</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>1.1 Présentation du Projet</h3> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+La Plateforme Web Convoyeur Intelligent de Tri est un système IoT innovant développé dans le cadre du TRC 2025 par l'équipe TEKBOT. Cette solution combine hardware embarqué et interface web moderne pour automatiser et optimiser le processus de tri des déchets par couleur.
+</p> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>1.2 Vision du Projet</h3> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Créer une solution complète de tri intelligent qui automatise la détection et classification des déchets, visualise en temps réel les performances du système, guide les opérateurs avec des consignes vocales, et analyse les données pour optimiser les processus.
+</p> </section> <!-- Contexte et Objectifs --> <section id="contexte-et-objectifs" class="p-8 border-b border-gray-200" data-astro-cid-eklq3gtr> <h2 class="text-2xl font-bold text-gray-900 mb-4" data-astro-cid-eklq3gtr>2. Contexte et Objectifs</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>2.1 Problématique</h3> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Le tri manuel des déchets présente plusieurs défis : erreurs humaines dans la classification, lenteur du processus de tri, manque de traçabilité des performances, et absence de données pour l'optimisation.
+</p> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>2.2 Objectifs Principaux</h3> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>2.2.1 Objectifs Techniques</h4> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr>Développer un système de détection automatique par couleur.</li> <li data-astro-cid-eklq3gtr>Créer une interface web temps réel responsive.</li> <li data-astro-cid-eklq3gtr>Implémenter une API robuste pour la communication IoT.</li> <li data-astro-cid-eklq3gtr>Assurer une latence faible pour les détections.</li> </ul> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>2.2.2 Objectifs Fonctionnels</h4> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr>Tri automatique de 4 couleurs (jaune, bleu, vert, rouge).</li> <li data-astro-cid-eklq3gtr>Synthèse vocale pour guidage opérateur.</li> <li data-astro-cid-eklq3gtr>Tableau de bord analytique avec graphiques.</li> <li data-astro-cid-eklq3gtr>Historique des détections avec horodatage.</li> </ul> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>2.2.3 Objectifs Qualité</h4> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr>Interface utilisateur intuitive et moderne.</li> <li data-astro-cid-eklq3gtr>Système fiable avec gestion d'erreurs.</li> <li data-astro-cid-eklq3gtr>Performance optimisée pour l'IoT.</li> <li data-astro-cid-eklq3gtr>Code maintenable et documenté.</li> </ul> </section> <!-- Analyse des Besoins --> <section id="analyse-des-besoins" class="p-8 border-b border-gray-200" data-astro-cid-eklq3gtr> <h2 class="text-2xl font-bold text-gray-900 mb-4" data-astro-cid-eklq3gtr>3. Analyse des Besoins</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>3.1 Besoins Fonctionnels</h3> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>3.1.1 Détection et Classification</h4> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr>Détecter la présence d'un déchet sur le convoyeur.</li> <li data-astro-cid-eklq3gtr>Identifier la couleur du déchet (4 couleurs supportées).</li> <li data-astro-cid-eklq3gtr>Transmettre les données via Wi-Fi à l'API.</li> <li data-astro-cid-eklq3gtr>Horodater chaque détection avec précision.</li> </ul> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>3.1.2 Interface Utilisateur</h4> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr>Afficher l'animation du convoyeur en temps réel.</li> <li data-astro-cid-eklq3gtr>Mettre à jour les compteurs par couleur.</li> <li data-astro-cid-eklq3gtr>Fournir des consignes vocales automatiques.</li> <li data-astro-cid-eklq3gtr>Présenter un historique des détections.</li> </ul> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>3.1.3 Analyse et Reporting</h4> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr>Générer des graphiques de performance.</li> <li data-astro-cid-eklq3gtr>Calculer des métriques (débit, moyennes, variations).</li> <li data-astro-cid-eklq3gtr>Exporter les données pour analyse externe.</li> <li data-astro-cid-eklq3gtr>Alertes en cas de dysfonctionnement.</li> </ul> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>3.2 Besoins Non-Fonctionnels</h3> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>3.2.1 Performance</h4> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr>Latence faible pour les détections.</li> <li data-astro-cid-eklq3gtr>Interface fluide .</li> </ul> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>3.2.2 Utilisabilité</h4> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr>Interface responsive (mobile/desktop).</li> </ul> </section> <!-- Choix Technologiques --> <section id="choix-technologiques" class="p-8 border-b border-gray-200" data-astro-cid-eklq3gtr> <h2 class="text-2xl font-bold text-gray-900 mb-4" data-astro-cid-eklq3gtr>4. Choix Technologiques</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>4.1 Architecture Matérielle</h3> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>4.1.1 Microcontrôleur Principal</h4> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Arduino Nano (ATmega328P) : Faible coût et grande disponibilité, écosystème riche de capteurs compatibles, consommation énergétique optimisée, documentation extensive.
+</p> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>4.1.2 Module de Communication</h4> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+ESP-01 (ESP8266) : Wi-Fi intégré avec stack TCP/IP, coût très compétitif, faible consommation en mode veille, compatible avec Arduino IDE.
+</p> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>4.1.3 Capteurs</h4> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Capteur de Couleur TCS3200 : Détection RGB précise, interface digitale simple, calibration programmable, coût abordable.
+</p> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Capteur LDR couplé au laser Laser pour la presence  : Détection précise sans contact, réponse rapide &lt; 1ms, .
+</p> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>4.2 Stack Technologique Logicielle</h3> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>4.2.1 Frontend Web</h4> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+React 18 + TypeScript : Écosystème mature et performant, typage statique pour la robustesse, hooks pour la gestion d'état moderne, large communauté et support.
+</p> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>4.2.2 Backend API</h4> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Node.js + Express.js : Performance élevée pour l'IoT, écosystème npm riche, JavaScript full-stack, gestion native des WebSockets.
+</p> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>4.2.3 Outils de Développement</h4> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Vite : Build ultra-rapide avec ESBuild, Hot Module Replacement instantané, configuration minimale, support TypeScript natif.
+</p> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Recharts : Graphiques React natifs, performance optimisée, customisation complète, API intuitive.
+</p> </section> <!-- Architecture Système --> <section id="architecture-systeme" class="p-8 border-b border-gray-200" data-astro-cid-eklq3gtr> <h2 class="text-2xl font-bold text-gray-900 mb-4" data-astro-cid-eklq3gtr>5. Architecture Système</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>5.1 Vue d'Ensemble</h3> <pre class="bg-gray-100 p-4 rounded" data-astro-cid-eklq3gtr>┌─────────────────┐    ┌──────────────┐    ┌─────────────────┐
+│   Arduino Nano    │    │    ESP-01    │    │   API Backend   │
+│   + Capteurs     │───▶│   Wi-Fi      │───▶│   Express.js    │
+│   (TCS3200)      │    │   Module     │    │   Port 3001     │
+└─────────────────┘    └──────────────┘    └─────────────────┘
+                                                     │
+                                                     ▼
+                                           ┌─────────────────┐
+                                           │  Frontend React  │
+                                           │  Port 5173       │
+                                           └─────────────────┘
+              </pre> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>5.2 Couche Communication</h3> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Protocoles Utilisés : UART (Arduino ↔ ESP-01), Wi-Fi 802.11n (ESP-01 ↔ Réseau local), HTTP/REST (ESP-01 ↔ API Backend).
+</p> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>5.3 Couche Backend</h3> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Architecture API REST :
+</p> <pre class="bg-gray-100 p-4 rounded" data-astro-cid-eklq3gtr>├── Routes
+│   ├── POST /tri          # Réception détections
+│   ├── GET /stats         # Statistiques temps réel
+│   ├── GET /history       # Historique détections
+│   ├── POST /reset        # Reset données
+│   └── GET /status        # État système
+├── Middleware
+│   ├── CORS               # Cross-origin requests
+│   ├── JSON Parser        # Parsing requêtes
+│   ├── Error Handler      # Gestion erreurs
+│   └── Rate Limiter       # Protection DDoS
+└── Storage
+    ├── Memory Store       # Stockage temporaire
+    ├── Statistics         # Compteurs par couleur
+    └── Detection History  # Historique limité
+              </pre> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>5.4 Couche Frontend</h3> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Architecture Composants :
+</p> <pre class="bg-gray-100 p-4 rounded" data-astro-cid-eklq3gtr>src/
+├── components/
+│   ├── Header.tsx              # En-tête avec statut
+│   ├── ConveyorAnimation.tsx   # Animation convoyeur
+│   ├── WasteCounter.tsx        # Compteurs par couleur
+│   ├── DetectionHistory.tsx    # Historique détections
+│   ├── ControlPanel.tsx        # Contrôles système
+│   └── Dashboard.tsx           # Graphiques analytiques
+├── hooks/
+│   ├── useWasteDetection.ts    # Gestion détections
+│   └── useSpeechSynthesis.ts   # Synthèse vocale
+├── types/
+│   └── waste.ts                # Types TypeScript
+└── App.tsx                     # Composant principal
+              </pre> </section> <!-- Conception et Design --> <section id="conception-et-design" class="p-8 border-b border-gray-200" data-astro-cid-eklq3gtr> <h2 class="text-2xl font-bold text-gray-900 mb-4" data-astro-cid-eklq3gtr>6. Conception et Design</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>6.1 Principes de Design</h3> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+La conception de l'interface utilisateur et l'expérience utilisateur ont été guidées par des principes de design centrés sur l'utilisateur, en mettant l'accent sur la simplicité, l'efficacité et l'esthétique.
+</p> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>6.1.1 Design System</h4> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Nous avons établi un système de design cohérent pour garantir une expérience utilisateur uniforme à travers toutes les plateformes.
+</p> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Palette de Couleurs :</strong> Bleu industriel (#3B82F6), Gris moderne (#6B7280), Vert succès (#22C55E), Rouge attention (#EF4444).</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Couleurs des déchets :</strong> Jaune (#F59E0B), Bleu (#3B82F6), Vert (#10B981), Rouge (#EF4444), Noir (#111827), Blanc (#FFFFFF).</li> </ul> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>6.1.2 Typographie</h4> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+La typographie joue un rôle crucial dans la lisibilité et l'expérience utilisateur globale.
+</p> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Famille de polices :</strong> Inter (système), avec une police de secours sans-serif.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Échelle de tailles :</strong> 12px, 14px, 16px, 18px, 24px, 32px.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Poids :</strong> Regular (400), Medium (500), Bold (700).</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Interlignage :</strong> 1.5 pour le corps de texte, 1.2 pour les titres.</li> </ul> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>6.1.3 Système de Spacing</h4> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Un système de spacing cohérent est utilisé pour maintenir l'alignement et l'équilibre visuel.
+</p> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Échelle basée sur 8px :</strong> xs (4px), sm (8px), md (16px), lg (24px), xl (32px), 2xl (48px).</li> </ul> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>6.2 Interface Utilisateur</h3> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+L'interface utilisateur a été conçue pour être intuitive et facile à utiliser, tout en fournissant toutes les fonctionnalités nécessaires pour le tri des déchets.
+</p> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>6.2.1 Layout Principal</h4> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Le layout principal est structuré pour offrir une navigation fluide et un accès rapide aux informations clés.
+</p> <pre class="bg-gray-100 p-4 rounded" data-astro-cid-eklq3gtr>┌─────────────────────────────────────────────────┐
+│                   HEADER                          │
+│  TEKBOT Logo | Titre | Statut | Compteur Total   │
+├─────────────────────────────────────────────────┤
+│                 NAVIGATION                        │
+│        Vue d'ensemble | Analyses | Paramètres     │
+├─────────────────────────────────────────────────┤
+│  MAIN CONTENT                    │  SIDEBAR       │
+│  ┌─────────────────────────────┐ │ ┌──────────┐ │
+│  │    Animation Convoyeur        │ │ │ Contrôles │ │
+│  └─────────────────────────────┘ │ └──────────┘ │
+│  ┌─────────────────────────────┐ │ ┌──────────┐ │
+│  │    Compteurs Couleurs         │ │ │Historique │ │
+│  └─────────────────────────────┘ │ └──────────┘ │
+│  ┌─────────────────────────────┐ │              │
+│  │    Métriques Système          │ │              │
+│  └─────────────────────────────┘ │              │
+└─────────────────────────────────────────────────┘
+  </pre> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>6.2.2 Composants Clés</h4> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Les composants clés de l'interface utilisateur sont conçus pour offrir une expérience utilisateur fluide et intuitive.
+</p> <h5 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>Animation Convoyeur</h5> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Dimensions :</strong> 100% de la largeur, 128px de hauteur.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Texture :</strong> Dégradé métallique avec lignes de guidage.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Items :</strong> Cubes 3D colorés avec ombres.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Zones :</strong> Détection (rouge) et Tri (vert) marquées.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Animation :</strong> 60 FPS, mouvement fluide de gauche à droite.</li> </ul> <h5 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>Compteurs de Déchets</h5> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Layout :</strong> Grille 2x3 (mobile) → 3x2 (desktop).</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Cartes :</strong> Bordure colorée, ombre subtile.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Contenu :</strong> Pastille couleur + nom + nombre + barre de progression.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Animation :</strong> Transition smooth sur les changements.</li> </ul> <h5 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>Graphiques Analytiques</h5> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Types :</strong> Barres, Camembert, Courbe temporelle.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Couleurs :</strong> Cohérentes avec les déchets.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Interactivité :</strong> Tooltips, zoom, sélection.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Responsive :</strong> Adaptation automatique mobile/desktop.</li> </ul> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>6.3 Expérience Utilisateur (UX)</h3> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+L'expérience utilisateur a été conçue pour être intuitive et facile à utiliser, en mettant l'accent sur la simplicité et l'efficacité.
+</p> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>6.3.1 Parcours Utilisateur Principal</h4> <ol class="list-decimal pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr>Arrivée : Statut système visible immédiatement.</li> <li data-astro-cid-eklq3gtr>Observation : Animation convoyeur attire l'attention.</li> <li data-astro-cid-eklq3gtr>Compréhension : Compteurs montrent la répartition.</li> <li data-astro-cid-eklq3gtr>Analyse : Onglet graphiques pour approfondir.</li> <li data-astro-cid-eklq3gtr>Contrôle : Panneau pour actions (pause, simulation).</li> </ol> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>6.3.2 Feedback Utilisateur</h4> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Visuel :</strong> Animations, changements de couleur, badges.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Auditif :</strong> Synthèse vocale pour consignes.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Temporel :</strong> Timestamps précis, durées d'animation.</li> </ul> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>6.4 Design Responsive</h3> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Le design responsive assure que l'interface utilisateur est accessible et utilisable sur une variété de dispositifs et de tailles d'écran.
+</p> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>6.4.1 Breakpoints</h4> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Mobile :</strong> 320px - 767px.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Tablette :</strong> 768px - 1023px.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Desktop :</strong> 1024px+.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Large :</strong> 1440px+.</li> </ul> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>6.4.2 Adaptations par Écran</h4> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Mobile (320px+) :</strong> Navigation par onglets, Convoyeur adapté en hauteur, Compteurs en grille 2x3, Graphiques simplifiés, Contrôles en bottom sheet.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Tablette (768px+) :</strong> Sidebar partiellement visible, Convoyeur taille intermédiaire, Compteurs en grille 3x2, Graphiques complets, Contrôles en sidebar.</li> <li data-astro-cid-eklq3gtr><strong data-astro-cid-eklq3gtr>Desktop (1024px+) :</strong> Layout complet 3 colonnes, Convoyeur pleine largeur, Tous les composants visibles, Graphiques interactifs avancés, Contrôles intégrés.</li> </ul> </section> <!-- Développement et Implémentation --> <section id="developpement-et-implementation" class="p-8 border-b border-gray-200" data-astro-cid-eklq3gtr> <h2 class="text-2xl font-bold text-gray-900 mb-4" data-astro-cid-eklq3gtr>7. Développement et Implémentation</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>7.1 Méthodologie de Développement</h3> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>7.2 Structure du Code</h3> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>7.2.1 Organisation Frontend</h4> <pre class="bg-gray-100 p-4 rounded" data-astro-cid-eklq3gtr>src/
+├── components/
+│   ├── ui/
+│   ├── layout/
+│   └── features/
+├── hooks/
+├── services/
+├── utils/
+├── types/
+├── constants/
+└── styles/
+              </pre> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>7.2.2 Organisation Backend</h4> <pre class="bg-gray-100 p-4 rounded" data-astro-cid-eklq3gtr>server/
+├── index.js
+└── test.js
+              </pre> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>7.3 Implémentation des Fonctionnalités Clés</h3> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>7.3.1 Animation du Convoyeur</h4> <pre class="bg-gray-100 p-4 rounded" data-astro-cid-eklq3gtr>interface ConveyorItem &#123;
+  id: string;
+  couleur: string;
+  position: number; // 0-100%
+  timestamp: string;
+&#125;
+const animationLoop = () => &#123;
+  setAnimatedItems(prev =>
+    prev.map(item => (&#123;
+      ...item,
+      position: item.position + SPEED // 1.5px/frame
+    &#125;)).filter(item =  &gt; item.position &lt; 100)
+  );
+&#125;;
+              </pre> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>7.3.2 API Temps Réel</h4> <pre class="bg-gray-100 p-4 rounded" data-astro-cid-eklq3gtr>app.get('/stats', (req, res) => &#123;
+  const &#123; since &#125; = req.query;
+  if (since && parseInt(since) >= lastUpdateTimestamp) &#123;
+    return res.status(304).json(&#123;
+      message: 'Aucune modification'
+    &#125;);
+  &#125;
+  res.json(&#123;
+    timestamp: lastUpdateTimestamp,
+    data: &#123; stats, detectionHistory &#125;
+  &#125;);
+&#125;);
+              </pre> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>7.3.3 Synthèse Vocale</h4> <pre class="bg-gray-100 p-4 rounded" data-astro-cid-eklq3gtr>const announceDetection = (couleur: string) => &#123;
+  const messages = &#123;
+    jaune: "Déchet jaune détecté. Benne jaune.",
+    bleu: "Déchet bleu détecté. Benne bleue.",
+  &#125;;
+  const utterance = new SpeechSynthesisUtterance(messages[couleur]);
+  utterance.lang = 'fr-FR';
+  utterance.rate = 0.8;
+  speechSynthesis.speak(utterance);
+&#125;;
+              </pre> <h4 class="text-lg font-semibold text-gray-700 mb-2" data-astro-cid-eklq3gtr>7.3.4 Graphiques Analytiques</h4> <pre class="bg-gray-100 p-4 rounded" data-astro-cid-eklq3gtr>              </pre> <!-- <h3 class="text-xl font-semibold text-gray-800 mb-2">7.4 Optimisations Performance</h3> --> <!-- <h4 class="text-lg font-semibold text-gray-700 mb-2">7.4.1 Frontend</h4>
+              <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                <li>React.memo : Évite re-renders inutiles</li>
+                <li>useMemo/useCallback : Cache calculs coûteux</li>
+                <li>Lazy loading : Chargement composants à la demande</li>
+                <li>Bundle splitting : Code splitting par route</li>
+              </ul>
+              <h4 class="text-lg font-semibold text-gray-700 mb-2">7.4.2 Backend</h4>
+              <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                <li>Memory caching : Stockage en mémoire pour IoT</li>
+                <li>Connection pooling : Réutilisation connexions</li>
+                <li>Compression : Gzip pour réponses HTTP</li>
+                <li>Clustering : Multi-process pour scalabilité</li>
+              </ul>
+              <h4 class="text-lg font-semibold text-gray-700 mb-2">7.4.3 Réseau</h4>
+              <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                <li>HTTP/2 : Multiplexing des requêtes</li>
+                <li>CDN : Distribution géographique assets</li>
+                <li>Caching headers : Cache navigateur optimisé</li>
+                <li>WebSocket : Connexion persistante (optionnel)</li>
+              </ul> --> </section> <!-- Tests et Validation --> <section id="tests-et-validation" class="p-8 border-b border-gray-200" data-astro-cid-eklq3gtr> <h2 class="text-2xl font-bold text-gray-900 mb-4" data-astro-cid-eklq3gtr>8. Tests et Validation</h2> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Les tests ont été réalisés pour valider la performance et la fiabilité du système.
+</p><div style="padding:56.25% 0 0 0;position:relative;" data-astro-cid-eklq3gtr><iframe src="https://player.vimeo.com/video/1100828900?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="2025-07-12 10-12-02" data-astro-cid-eklq3gtr></iframe></div><script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("zoomModal"),t=document.getElementById("zoomedImage"),n=document.querySelector(".close");document.querySelectorAll(".zoomable-image").forEach(o=>{o.addEventListener("click",function(){e.style.display="block",t.src=this.src})}),n.addEventListener("click",function(){e.style.display="none"}),e.addEventListener("click",function(o){o.target===e&&(e.style.display="none")})});</script> <!-- Résultats et Performance --> <section id="resultats-et-performance" class="p-8 border-b border-gray-200" data-astro-cid-eklq3gtr> <h2 class="text-2xl font-bold text-gray-900 mb-4" data-astro-cid-eklq3gtr>9. Résultats et Performance</h2> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Les résultats obtenus montrent une performance optimale du système avec une latence minimale et une précision élevée dans la détection et le tri des déchets.
+</p> </section> <!-- Déploiement et Maintenance
+            <section id="deploiement-et-maintenance" class="p-8 border-b border-gray-200">
+              <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Déploiement et Maintenance</h2>
+              <p class="text-gray-600">
+                Le déploiement du système a été réalisé avec succès, et des plans de maintenance ont été mis en place pour assurer la continuité du service.
+              </p>
+            </section> --> <!-- Perspectives d'Évolution --> <section id="perspectives-devolution" class="p-8 border-b border-gray-200" data-astro-cid-eklq3gtr> <h2 class="text-2xl font-bold text-gray-900 mb-4" data-astro-cid-eklq3gtr>11. Perspectives d'Évolution</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>11.1 Roadmap Technique</h3> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr>Mode sombre : Interface adaptée utilisation nocturne.</li> <li data-astro-cid-eklq3gtr>Notifications push : Alertes temps réel navigateur.</li> <li data-astro-cid-eklq3gtr>Export PDF : Rapports formatés pour impression.</li> </ul> </section> <!-- Conclusion --> <section id="conclusion" class="p-8" data-astro-cid-eklq3gtr> <h2 class="text-2xl font-bold text-gray-900 mb-4" data-astro-cid-eklq3gtr>12. Conclusion</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>12.1 Synthèse du Projet</h3> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+La Plateforme Web Convoyeur Intelligent de Tri TEKBOT TRC 2025 a atteint l'ensemble de ses objectifs initiaux avec succès.
+</p> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>12.2 Conclusion Finale</h3> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+La Plateforme Web Convoyeur Intelligent de Tri représente une réussite technique et fonctionnelle complète. Le projet a non seulement atteint tous ses objectifs initiaux, mais les a dépassés dans de nombreux domaines.
+</p> </section> <section id="annexes" class="p-8 border-b border-gray-200" data-astro-cid-eklq3gtr> <h2 class="text-2xl font-bold text-gray-900 mb-4" data-astro-cid-eklq3gtr>13. Annexes</h2> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>13.1 Liens vers les Dépôts</h3> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Voici les liens vers les différents dépôts GitHub associés à ce projet :
+</p> <ul class="list-disc pl-5 space-y-2 text-gray-600" data-astro-cid-eklq3gtr> <li data-astro-cid-eklq3gtr> <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/tree/main/docs/informatique/final/project" class="text-blue-500 hover:underline" data-astro-cid-eklq3gtr>Dépôt Principal</a> : Contient le code source principal du projet.
+</li> <li data-astro-cid-eklq3gtr> <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/tree/main/docs/informatique/final/project" class="text-blue-500 hover:underline" data-astro-cid-eklq3gtr>Frontend</a> : Dépôt dédié à l'interface utilisateur développée avec React et TypeScript.
+</li> <li data-astro-cid-eklq3gtr> <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/tree/main/docs/informatique/final/project/server" class="text-blue-500 hover:underline" data-astro-cid-eklq3gtr>Backend</a> : Dépôt pour le serveur backend développé avec Node.js et Express.js.
+</li> <li data-astro-cid-eklq3gtr> <a href="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/blob/main/docs/informatique/final/project/README.md" class="text-blue-500 hover:underline" data-astro-cid-eklq3gtr>Documentation</a> : Documentation complète et guides d'utilisation.
+</li> </ul> <h3 class="text-xl font-semibold text-gray-800 mb-2" data-astro-cid-eklq3gtr>13.2 Galerie d'Images</h3> <p class="text-gray-600" data-astro-cid-eklq3gtr>
+Voici une galerie d'images illustrant différentes parties du projet :
+</p> <div class="grid grid-cols-2 md:grid-cols-3 gap-4 my-4" data-astro-cid-eklq3gtr> <div class="rounded-lg overflow-hidden shadow-md" data-astro-cid-eklq3gtr> <img src="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/raw/main/docs/informatique/final/images/tri.gif" alt="Animation Convoyeur" class="w-full zoomable-image" data-astro-cid-eklq3gtr> <p class="text-center text-sm text-gray-600 mt-2" data-astro-cid-eklq3gtr>Animation du convoyeur</p> </div> <div class="rounded-lg overflow-hidden shadow-md" data-astro-cid-eklq3gtr> <img src="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/raw/main/docs/informatique/final/images/vue_analytique.png" alt="Tableau de bord" class="w-full zoomable-image" data-astro-cid-eklq3gtr> <p class="text-center text-sm text-gray-600 mt-2" data-astro-cid-eklq3gtr>Tableau de bord analytique</p> </div> <div class="rounded-lg overflow-hidden shadow-md" data-astro-cid-eklq3gtr> <img src="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/raw/main/docs/informatique/final/images/vue_analytique_1.png" alt="Tableau de bord" class="w-full zoomable-image" data-astro-cid-eklq3gtr> <p class="text-center text-sm text-gray-600 mt-2" data-astro-cid-eklq3gtr>Tableau de bord analytique</p> </div> <div class="rounded-lg overflow-hidden shadow-md" data-astro-cid-eklq3gtr> <img src="https://github.com/TekBot-Robotics-Challenge/2025-Team-EPO-Docs/raw/main/docs/informatique/final/images/vue_tel.png" alt="Vue Mobile" class="w-full zoomable-image" data-astro-cid-eklq3gtr> <p class="text-center text-sm text-gray-600 mt-2" data-astro-cid-eklq3gtr>Interface mobile</p> </div> </div> </section> </section></div> </div> </div> </div> </main> <div id="zoomModal" class="modal" data-astro-cid-eklq3gtr> <span class="close" data-astro-cid-eklq3gtr>&times;</span> <img class="modal-content" id="zoomedImage" alt="Zoomed Image" data-astro-cid-eklq3gtr> </div> <script type="module" src="/2025-Team-EPO-Docs/_astro/final.astro_astro_type_script_index_1_lang.DRbxEomH.js"></script>   <script type="module">document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll('a[href^="#"]').forEach(t=>{t.addEventListener("click",function(e){e.preventDefault();const n=document.querySelector(this.getAttribute("href"));n&&n.scrollIntoView({behavior:"smooth",block:"start"})})})});function a(){const i=document.querySelector("#search-input"),t=document.querySelector("#search-results");!i||!t||(i.addEventListener("input",function(e){const n=e.target.value.toLowerCase().trim();if(n.length<2){t.innerHTML="",t.classList.add("hidden");return}document.body.textContent.toLowerCase();const c=document.querySelectorAll("section[id], div[id]"),r=[];c.forEach(o=>{const s=o.textContent.toLowerCase();if(s.includes(n)){const d=o.querySelector("h1, h2, h3")?.textContent||"Section";r.push({title:d,id:o.id,snippet:s.substr(s.indexOf(n)-50,100)})}}),r.length>0?(t.innerHTML=r.map(o=>`
+              <div class="p-3 hover:bg-gray-100 cursor-pointer border-b">
+                <a href="#${o.id}" class="block">
+                  <div class="font-medium text-primary-600">${o.title}</div>
+                  <div class="text-sm text-gray-600 truncate">${o.snippet}</div>
+                </a>
+              </div>
+            `).join(""),t.classList.remove("hidden")):(t.innerHTML='<div class="p-3 text-gray-500">Aucun résultat trouvé</div>',t.classList.remove("hidden"))}),document.addEventListener("click",function(e){!i.contains(e.target)&&!t.contains(e.target)&&t.classList.add("hidden")}))}function l(){document.querySelectorAll("pre code").forEach(t=>{const e=document.createElement("button");e.className="absolute top-2 right-2 px-2 py-1 bg-gray-700 text-white text-xs rounded hover:bg-gray-600 transition-colors",e.textContent="Copier";const n=t.parentElement;n.style.position="relative",n.appendChild(e),e.addEventListener("click",function(){navigator.clipboard.writeText(t.textContent).then(()=>{e.textContent="Copié !",setTimeout(()=>{e.textContent="Copier"},2e3)})})})}document.addEventListener("DOMContentLoaded",function(){a(),l()});</script> </body> </html>
